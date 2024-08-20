@@ -1,0 +1,14 @@
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/bin/Debug/net8.0/Lists
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/bin/Debug/net8.0/Lists.deps.json
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/bin/Debug/net8.0/Lists.runtimeconfig.json
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/bin/Debug/net8.0/Lists.dll
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/bin/Debug/net8.0/Lists.pdb
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.AssemblyInfoInputs.cache
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.AssemblyInfo.cs
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.csproj.CoreCompileInputs.cache
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.dll
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/refint/Lists.dll
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.pdb
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.genruntimeconfig.cache
+/Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/ref/Lists.dll
