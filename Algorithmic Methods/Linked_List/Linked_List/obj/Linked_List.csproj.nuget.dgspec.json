@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\QueuesAndStacks\\QueuesAndStacks.csproj": {}
+    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Linked_List\\Linked_List\\Linked_List.csproj": {}
   },
   "projects": {
-    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\QueuesAndStacks\\QueuesAndStacks.csproj": {
+    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Linked_List\\Linked_List\\Linked_List.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\QueuesAndStacks\\QueuesAndStacks.csproj",
-        "projectName": "QueuesAndStacks",
-        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\QueuesAndStacks\\QueuesAndStacks.csproj",
+        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Linked_List\\Linked_List\\Linked_List.csproj",
+        "projectName": "Linked_List",
+        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Linked_List\\Linked_List\\Linked_List.csproj",
         "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\QueuesAndStacks\\obj\\",
+        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Linked_List\\Linked_List\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"

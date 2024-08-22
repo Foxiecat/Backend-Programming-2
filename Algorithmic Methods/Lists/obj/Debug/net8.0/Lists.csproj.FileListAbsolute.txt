@@ -12,3 +12,18 @@
 /Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.pdb
 /Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/Lists.genruntimeconfig.cache
 /Users/neptune/Documents/School/Year 2/QueuesAndStacks/Lists/obj/Debug/net8.0/ref/Lists.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\bin\Debug\net8.0\Lists.exe
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\bin\Debug\net8.0\Lists.deps.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\bin\Debug\net8.0\Lists.runtimeconfig.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\bin\Debug\net8.0\Lists.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\bin\Debug\net8.0\Lists.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.AssemblyInfoInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.AssemblyInfo.cs
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.csproj.CoreCompileInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.sourcelink.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\refint\Lists.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\Lists.genruntimeconfig.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Lists\obj\Debug\net8.0\ref\Lists.dll
