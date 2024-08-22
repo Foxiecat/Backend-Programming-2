@@ -1,7 +1,7 @@
 namespace AM_Linked_List.Models;
 
-public class Node(string value, Node next)
+public class Node(string value)
 {
-    private string Value { get; set; } = value;
-    private Node Next { get; set; } = next;
+    public string Value { get; set; } = value;
+    public Node? Next { get; set; }
 }
