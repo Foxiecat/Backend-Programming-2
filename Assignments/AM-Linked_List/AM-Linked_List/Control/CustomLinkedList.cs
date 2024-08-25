@@ -7,7 +7,7 @@ public class CustomLinkedList<T> : IEnumerable
 {
     public Node<T>? FirstNode { get; private set; }
     public Node<T>? LastNode { get; private set; }
-    public int Count { get; set; }
+    public int Count { get; private set; }
     
     
     /// <summary>
@@ -26,7 +26,7 @@ public class CustomLinkedList<T> : IEnumerable
             }
 
             Node<T> currentNode = new (item);
-            // If the list is empty, add the new node as the first and last node in list
+            // If the list is empty, add the new node as the first and last node in the list
             if (FirstNode == null)
             {
                 FirstNode = currentNode;
@@ -41,13 +41,118 @@ public class CustomLinkedList<T> : IEnumerable
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="InvalidOperationException"></exception>
+    public T RemoveHead()
+    {
+        lock (this)
+        {
+            if (FirstNode == null)
+            {
+                throw new InvalidOperationException("List appears to be empty.");
+            }
+
+            T removedData = FirstNode.Item;
+
+            if (FirstNode == LastNode)
+            {
+                FirstNode = LastNode = null;
+            }
+            else FirstNode = FirstNode.Next;
+
+            Count--;
+            return removedData;
+        }
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    /// <exception cref="InvalidOperationException"></exception>
+    public T RemoveTail()
+    {
+        lock (this)
+        {
+            if (FirstNode == null)
+            {
+                LastNode = null;
+                throw new InvalidOperationException("List appears to be empty.");
+            }
+            
+            T removedData = LastNode.Item;
+            if (FirstNode == LastNode)
+            {
+                FirstNode = LastNode = null;
+            }
+            else
+            {
+                Node<T> currentNode = FirstNode;
+                while (currentNode.Next != LastNode)
+                {
+                    currentNode = currentNode.Next;
+                }
+                
+                LastNode = currentNode;
+                currentNode.Next = null;
+            }
+
+            Count--;
+            return removedData;
+        }
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="index"></param>
+    /// <returns></returns>
+    /// <exception cref="ArgumentOutOfRangeException"></exception>
+    public T RemoveAt(int index)
+    {
+        lock (this)
+        {
+            if (index >= Count || index < 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Index must be less than the size of the list and non-negative.");
+            }
+
+            T removedData;
+            if (index == 0)
+            {
+                removedData = RemoveHead();
+            }
+            else if (index == Count - 1)
+            {
+                removedData = RemoveTail();
+            }
+            else
+            {
+                Node<T> currentNode = FirstNode!;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.Next!;
+                }
+                
+                removedData = currentNode.Next!.Item;
+                currentNode.Next = currentNode.Next.Next;
+            }
+
+            Count--;
+            return removedData;
+        }
+    }
+    
     
     /// <summary>
     /// Removes the specified item from the list if it exists
     /// </summary>
     /// <param name="itemToBeRemoved"></param>
     /// <exception cref="InvalidOperationException">Throws exception if the list is empty or the item cannot be found</exception>
-    public void Remove(T itemToBeRemoved)
+    public bool Remove(T itemToBeRemoved)
     {
         lock (this)
         {
@@ -61,7 +166,7 @@ public class CustomLinkedList<T> : IEnumerable
             {
                 FirstNode = FirstNode.Next;
                 Count--;
-                return;
+                return true;
             }
         
             Node<T> previousNode = FirstNode;
@@ -80,18 +185,18 @@ public class CustomLinkedList<T> : IEnumerable
                     }
                 
                     Count--;
-                    return;
+                    return true;
                 }
             
                 previousNode = currentNode;
                 currentNode = currentNode.Next;
             }
 
-            throw new InvalidOperationException($"{itemToBeRemoved} does not exist in the list.");
+            return false;
         }
     }
 
-    
+
     /// <summary>
     /// Iterates through the list to find a specified item
     /// </summary>
@@ -100,17 +205,41 @@ public class CustomLinkedList<T> : IEnumerable
     public Node<T>? Find(T item)
     {
         Node<T>? currentNode = FirstNode;
-        
+
         while (currentNode != null)
         {
             if (currentNode.Item != null && currentNode.Item.Equals(item))
             {
                 return currentNode;
             }
-            
+
             currentNode = currentNode.Next;
         }
         return null;
+    }
+    
+    /// <summary>
+    /// A simple indexer
+    /// </summary>
+    public T this[int index]
+    {
+        get
+        {
+            if (index < 0 | index >= Count)
+            {
+                throw new ArgumentOutOfRangeException(nameof(index), "Index must be less than the size of the list and non-negative.");
+            }
+            Node<T>? currentNode = FirstNode;
+            
+            // Goes through the list and finds the node at the given index
+            for (int i = 0; i < index; i++)
+            {
+                // currentNode will never be null because index should always be within bounds
+                currentNode = currentNode!.Next;
+            }
+            
+            return currentNode!.Item ?? throw new InvalidOperationException("The item at the given index was not found or is null.");
+        }
     }
     
     // Simple iteration support:
