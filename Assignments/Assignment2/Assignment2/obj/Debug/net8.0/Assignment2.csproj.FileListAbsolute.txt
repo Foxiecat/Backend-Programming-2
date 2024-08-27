@@ -1,0 +1,14 @@
+/Users/craig/Developer/Assignment2/Assignment2/bin/Debug/net8.0/Assignment2
+/Users/craig/Developer/Assignment2/Assignment2/bin/Debug/net8.0/Assignment2.deps.json
+/Users/craig/Developer/Assignment2/Assignment2/bin/Debug/net8.0/Assignment2.runtimeconfig.json
+/Users/craig/Developer/Assignment2/Assignment2/bin/Debug/net8.0/Assignment2.dll
+/Users/craig/Developer/Assignment2/Assignment2/bin/Debug/net8.0/Assignment2.pdb
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.AssemblyInfoInputs.cache
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.AssemblyInfo.cs
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.csproj.CoreCompileInputs.cache
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.dll
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/refint/Assignment2.dll
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.pdb
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.genruntimeconfig.cache
+/Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/ref/Assignment2.dll
