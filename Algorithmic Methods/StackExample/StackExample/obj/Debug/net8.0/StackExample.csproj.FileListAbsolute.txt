@@ -1,0 +1,15 @@
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/bin/Debug/net8.0/StackExample
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/bin/Debug/net8.0/StackExample.deps.json
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/bin/Debug/net8.0/StackExample.runtimeconfig.json
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/bin/Debug/net8.0/StackExample.dll
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/bin/Debug/net8.0/StackExample.pdb
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.AssemblyInfoInputs.cache
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.AssemblyInfo.cs
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.csproj.CoreCompileInputs.cache
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.sourcelink.json
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.dll
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/refint/StackExample.dll
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.pdb
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/StackExample.genruntimeconfig.cache
+/Users/neptune/Documents/School/Year 2/Algorithmic Methods/StackExample/StackExample/obj/Debug/net8.0/ref/StackExample.dll

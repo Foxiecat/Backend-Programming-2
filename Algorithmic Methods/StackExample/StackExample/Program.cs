@@ -34,6 +34,18 @@ class Program
 
         hashSet.Contains(17);
 
+        Dictionary<int, string> customers = new()
+        {
+            { 1, "Mary" },
+            { 2, "Clare" },
+            { 3, "Joe" },
+            { 4, "Jack" }
+        };
 
+        Console.WriteLine(customers[1]);
+
+        string[] custs = new string[4];
+
+        custs[1] = "Danica";
     }
 }
