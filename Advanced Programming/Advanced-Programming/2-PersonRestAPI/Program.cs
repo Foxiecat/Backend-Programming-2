@@ -1,6 +1,10 @@
-using _2_PersonRestAPI.Models;
+using PersonRestAPI.Endpoints;
+using PersonRestAPI.Repositories;
+using PersonRestAPI.Repositories.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddSingleton<IPersonRepository, PersonInMemoryDataStorage>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -18,25 +22,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// Lager vårt første endepunkt! Metode: GET, https://localhost:7288/persons/
+// Write our own endpoint! Method: GET, https://localhost:7288/persons/
 
-app.MapGet(pattern:"/persons", handler:() =>
-    {
-        Person person = new() { Age = 20, id = 1, FirstName = "Ola", LastName = "Normann" };
-        return Results.Ok(person); 
-    }).WithName("GetPersons")
-    .WithOpenApi();
-
-app.MapPost(pattern:"/persons", handler:(Person person) =>
-{
-    return Results.Ok(new Person()
-    {
-        Age = person.Age + 1,
-        FirstName = person.FirstName,
-        LastName = person.LastName,
-        id = person.id,
-    });
-}).WithName("AddPerson")
-    .WithOpenApi();
+app.MapPersonEndpoints(); // It's really important to keep our code clean
 
 app.Run();

@@ -4,13 +4,29 @@ GET {{PersonRestAPI_HostAddress}}/persons
 Accept: application/json
 
 ###
-POST {{PersonRestAPI_HostAddress}}//persons
+POST {{PersonRestAPI_HostAddress}}/persons
 Accept: application/json
 Content-Type: application/json
+
 {
   "id": 1,
   "firstName": "Rachel",
   "lastName": "Foxie",
+  "age": 27
+}
+###
+
+DELETE {{PersonRestAPI_HostAddress}}/persons/1
+###
+
+PUT {{PersonRestAPI_HostAddress}}/persons/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
   "age": 27
 }
 ###

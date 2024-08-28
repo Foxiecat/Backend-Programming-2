@@ -1,0 +1,151 @@
+PUT https://localhost:7288/persons/1
+Accept: application/json
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
+  "age": 27
+}
+
+###
+
+GET https://localhost:7288/persons
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-08-28T122326.200.json
+
+###
+
+POST https://localhost:7288/persons
+Accept: application/json
+Content-Type: application/json
+Content-Length: 74
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Rachel",
+  "lastName": "Foxie",
+  "age": 27
+}
+
+<> 2024-08-28T122320.200.json
+
+###
+
+DELETE https://localhost:7288/persons/1
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+PUT https://localhost:7288/persons/0
+Accept: application/json
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
+  "age": 27
+}
+
+###
+
+PUT https://localhost:7288/persons/1
+Accept: application/json
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
+  "age": 27
+}
+
+###
+
+GET https://localhost:7288/persons
+Accept: application/json
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+content-length: 0
+
+<> 2024-08-28T122138.200.json
+
+###
+
+PUT https://localhost:7288/persons/1
+Accept: application/json
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
+  "age": 27
+}
+
+###
+
+PUT https://localhost:7288/persons/1
+Accept: application/json
+Content-Type: application/json
+Content-Length: 72
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Sophia",
+  "lastName": "Cat",
+  "age": 27
+}
+
+###
+
+POST https://localhost:7288/persons
+Accept: application/json
+Content-Type: application/json
+Content-Length: 74
+User-Agent: IntelliJ HTTP Client/JetBrains Rider 2024.2.2
+Accept-Encoding: br, deflate, gzip, x-gzip
+x-http2-scheme: https
+
+{
+  "id": 1,
+  "firstName": "Rachel",
+  "lastName": "Foxie",
+  "age": 27
+}
+
+<> 2024-08-28T122108.200.json
+
+###
+

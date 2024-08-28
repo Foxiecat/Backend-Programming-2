@@ -31,3 +31,4 @@
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Advanced-Programming/2-PersonRestAPI/obj/Debug/net8.0/2-PersonRestAPI.pdb
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Advanced-Programming/2-PersonRestAPI/obj/Debug/net8.0/2-PersonRestAPI.genruntimeconfig.cache
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Advanced-Programming/2-PersonRestAPI/obj/Debug/net8.0/ref/2-PersonRestAPI.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Advanced-Programming/2-PersonRestAPI/obj/Debug/net8.0/2-PersonRestAPI.sourcelink.json

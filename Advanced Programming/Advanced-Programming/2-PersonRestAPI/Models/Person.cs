@@ -1,4 +1,4 @@
-namespace _2_PersonRestAPI.Models;
+namespace PersonRestAPI.Models;
 
 public class Person
 {
