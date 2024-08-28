@@ -7,19 +7,21 @@ public static class PersonEndpoints
 {
     public static void MapPersonEndpoints(this WebApplication app)
     {
-        app.MapGet(pattern: "/persons", GetPersons)
+        var personGroup = app.MapGroup("/persons");
+        
+        personGroup.MapGet("", GetPersons)
             .WithName("GetPersons")
             .WithOpenApi();
 
-        app.MapPost(pattern: "/persons", AddPerson)
+        personGroup.MapPost("", AddPerson)
             .WithName("AddPerson")
             .WithOpenApi();
 
-        app.MapDelete(pattern: "/persons", DeletePerson)
+        personGroup.MapDelete("/{id:int}", DeletePerson)
             .WithName("DeletePerson")
             .WithOpenApi();
         
-        app.MapPut(pattern: "/persons", UpdatePerson)
+        personGroup.MapPut("{id:int}", UpdatePersonAsync)
             .WithName("UpdatePerson")
             .WithOpenApi();
     }
@@ -50,7 +52,7 @@ public static class PersonEndpoints
             : Results.Ok(deletePerson);
     }
 
-    private static async Task<IResult> UpdatePerson(IPersonRepository repository, int id, Person person)
+    private static async Task<IResult> UpdatePersonAsync(IPersonRepository repository, int id, Person person)
     {
         Person? updatePerson = await repository.UpdateAsync(id, person);
         

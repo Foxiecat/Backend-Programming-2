@@ -1,10 +1,12 @@
 using PersonRestAPI.Endpoints;
+using PersonRestAPI.Models;
 using PersonRestAPI.Repositories;
 using PersonRestAPI.Repositories.Interfaces;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IPersonRepository, PersonInMemoryDataStorage>();
+builder.Services.AddSingleton<IRepository<Person>, PersonGenericInMemoryDataBase>();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
