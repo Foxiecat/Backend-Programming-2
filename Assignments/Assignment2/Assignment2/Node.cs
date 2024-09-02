@@ -2,58 +2,79 @@ namespace Assignment2;
 
 public class Node<T>
 {
-    public T value;
-    public List<Node<T>> children = new List<Node<T>>();
+    private T _value;
+    private List<Node<T>> _children = [];
     public Node(T value)
     {
-        this.value = value;
+        _value = value;
     }
 
     public void AddChild(Node<T> item)
     {
-        children.Add(item);
+        _children.Add(item);
     }
     
     public void AddChildren(List<Node<T>> items)
     {
         foreach (Node<T> item in items)
         {
-            children.Add(item);
+            _children.Add(item);
         }
     }
 
     public override string ToString()
     {
-        return $"Node of value: {value}";
+        return $"Node of value: {_value}";
     }
     
-    public static Node<int>? BFS(Node<int> start, int target)
+    public static Node<int>? BreadthFirstSearch(Node<int> start, int target)
     {
-        Queue<Node<int>> BFS_Q = new Queue<Node<int>>();
-        BFS_Q.Enqueue(start);
+        Queue<Node<int>> bfsQ = new();
+        bfsQ.Enqueue(start);
         int step = 1;
-        while (BFS_Q.Count > 0)
+        while (bfsQ.Count > 0)
         {
-            Node<int> current = BFS_Q.Dequeue();
-            Console.WriteLine($"Step {step}: Dequeued {current.value}");
+            Node<int> current = bfsQ.Dequeue();
+            Console.WriteLine($"Step {step}: Dequeued {current._value}");
             step++;
-            if (current.value == target)
+            if (current._value == target)
             {
-                //exit if found
+                // Exit if found
                 return current;
             }
 
-            foreach (Node<int> child in current.children)
+            foreach (Node<int> child in current._children)
             {
-                BFS_Q.Enqueue(child);
+                bfsQ.Enqueue(child);
             }
         }
         return null;
     }
 
-    public static Node<int>? DFS(Node<int> start, int target)
+    public static Node<int>? DepthFirstSearch(Node<int> start, int target)
     {
-        // https://youtu.be/s3C4h6nSNis
+        Stack<Node<int>> depthFirstSearchQuery = new();
+        depthFirstSearchQuery.Push(start);
+        int step = 1;
+
+        while (depthFirstSearchQuery.Count > 0)
+        {
+            Node<int> current = depthFirstSearchQuery.Pop();
+            Console.WriteLine($"Step {step}: Popped {current._value}");
+            step++;
+
+            if (current._value == target)
+            {
+                // Exit if target is found
+                return current;
+            }
+            
+            for (int index = current._children.Count - 1; index >= 0; index--)
+            {
+                depthFirstSearchQuery.Push(current._children[index]);
+            }
+        }
+        
         return null;
     }
 }

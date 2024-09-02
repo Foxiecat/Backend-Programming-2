@@ -57,9 +57,9 @@ class Program
         Console.WriteLine("Tree has been built...");
 
         Console.WriteLine("\nBreadth First Search:");
-        Console.WriteLine(Node<int>.BFS(n107, 72));
+        Console.WriteLine(Node<int>.BreadthFirstSearch(n107, 72));
         
         Console.WriteLine("\nDepth First Search:");
-        Console.WriteLine(Node<int>.DFS(n107, 72));
+        Console.WriteLine(Node<int>.DepthFirstSearch(n107, 72));
     }
 }

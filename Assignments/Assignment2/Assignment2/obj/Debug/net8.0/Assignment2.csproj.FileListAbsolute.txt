@@ -12,3 +12,18 @@
 /Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.pdb
 /Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/Assignment2.genruntimeconfig.cache
 /Users/craig/Developer/Assignment2/Assignment2/obj/Debug/net8.0/ref/Assignment2.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\bin\Debug\net8.0\Assignment2.exe
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\bin\Debug\net8.0\Assignment2.deps.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\bin\Debug\net8.0\Assignment2.runtimeconfig.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\bin\Debug\net8.0\Assignment2.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\bin\Debug\net8.0\Assignment2.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.AssemblyInfoInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.AssemblyInfo.cs
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.csproj.CoreCompileInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.sourcelink.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\refint\Assignment2.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\Assignment2.genruntimeconfig.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Assignment2\Assignment2\obj\Debug\net8.0\ref\Assignment2.dll

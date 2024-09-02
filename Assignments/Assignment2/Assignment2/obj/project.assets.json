@@ -8,25 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "/Users/neptune/.nuget/packages/": {}
+    "C:\\Users\\White\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/neptune/Documents/School/Year 2/Assignments/Assignment2/Assignment2/Assignment2.csproj",
+      "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Assignments\\Assignment2\\Assignment2\\Assignment2.csproj",
       "projectName": "Assignment2",
-      "projectPath": "/Users/neptune/Documents/School/Year 2/Assignments/Assignment2/Assignment2/Assignment2.csproj",
-      "packagesPath": "/Users/neptune/.nuget/packages/",
-      "outputPath": "/Users/neptune/Documents/School/Year 2/Assignments/Assignment2/Assignment2/obj/",
+      "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Assignments\\Assignment2\\Assignment2\\Assignment2.csproj",
+      "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Assignments\\Assignment2\\Assignment2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/neptune/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -39,6 +38,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\White\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
