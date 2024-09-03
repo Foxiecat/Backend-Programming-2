@@ -1,0 +1,128 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\Quicksort\\Quicksort.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\Quicksort\\Quicksort.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\Quicksort\\Quicksort.csproj",
+        "projectName": "Quicksort",
+        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\Quicksort\\Quicksort.csproj",
+        "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\Quicksort\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
+                "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\White\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
+        "projectName": "SortUtilities",
+        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
+        "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\White\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

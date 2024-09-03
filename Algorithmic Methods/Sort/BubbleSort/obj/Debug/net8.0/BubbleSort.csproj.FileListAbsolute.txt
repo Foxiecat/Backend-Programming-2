@@ -1,0 +1,34 @@
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.exe
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.deps.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.runtimeconfig.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.AssemblyInfoInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.AssemblyInfo.cs
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.csproj.CoreCompileInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.sourcelink.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\refint\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.genruntimeconfig.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Assignments\Sort\BubbleSort\obj\Debug\net8.0\ref\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.exe
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.deps.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.runtimeconfig.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\BubbleSort.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\SortUtilities.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\bin\Debug\net8.0\SortUtilities.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.csproj.AssemblyReference.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.AssemblyInfoInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.AssemblyInfo.cs
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.csproj.CoreCompileInputs.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.sourcelink.json
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.csproj.Up2Date
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\refint\BubbleSort.dll
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.pdb
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\BubbleSort.genruntimeconfig.cache
+C:\Users\White\OneDrive\Dokumenter\1. School\Year 2\Backend-Programming-2\Algorithmic Methods\Sort\BubbleSort\obj\Debug\net8.0\ref\BubbleSort.dll

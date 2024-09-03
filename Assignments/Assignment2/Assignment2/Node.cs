@@ -39,7 +39,7 @@ public class Node<T>
             step++;
             if (current._value == target)
             {
-                // Exit if found
+                // Exit if target is found
                 return current;
             }
 
