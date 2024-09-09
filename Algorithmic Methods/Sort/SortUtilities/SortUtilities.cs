@@ -21,9 +21,6 @@ public static class SortUtilities
         }
     }
     
-    /// <summary>
-    /// Creates an array used to test the average-case time complexity scenario
-    /// </summary>
     public static int[] CreateRandomArray(int size, int lower, int upper)
     {
         int[] array = new int[size];

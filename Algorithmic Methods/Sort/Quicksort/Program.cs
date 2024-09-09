@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // 10 million numbers:
         int[] theNumbers = CreateRandomArray(10000000, 1, 10000000);
         
          theNumbers = Quicksort(theNumbers);
