@@ -6,21 +6,52 @@ class Program
 {
     static void Main(string[] args)
     {
-        int[] theNumbers = { 15, 123, 157, 56, 4, 171, 188, 42, 219, 107, 139, 253, 91, 23, 8, 204, 72, 148, 234, 16 };
-        PrintArray(theNumbers);
-        
-        Console.WriteLine("\n");
+        // 2 000 000 numbers in an array cause why not? xD
+        int[] theNumbers = CreateRandomArray(2000000, 1, 2000000);
         
         theNumbers = Sort(theNumbers);
-        PrintArray(theNumbers);
         
+        PrintArray(theNumbers);
         Console.WriteLine("Sorted: " + IsSorted(theNumbers));
     }
 
     private static int[] Sort(int[] numbers)
     {
-        
+        if (numbers.Length <= 1)
+            return numbers;
+
+        for (int index = numbers.Length / 2 - 1; index >= 0; index--)
+        {
+            Heapify(numbers, numbers.Length, index);
+        }
+
+        for (int index = numbers.Length - 1; index >= 0; index--)
+        {
+            (numbers[0], numbers[index]) = (numbers[index], numbers[0]);
+            Heapify(numbers, index, 0);
+        }
         
         return numbers;
+    }
+
+    static void Heapify(int[] numbers, int size, int index)
+    {
+        int largestIndex = index;
+        int leftChild = 2 * index + 1;
+        int rightChild = 2 * index + 2;
+        
+        
+        if(leftChild < size && numbers[leftChild] > numbers[largestIndex])
+            largestIndex = leftChild;
+
+        if (rightChild < size && numbers[rightChild] > numbers[largestIndex])
+            largestIndex = rightChild;
+
+        
+        if (largestIndex != index)
+        {
+            (numbers[index], numbers[largestIndex]) = (numbers[largestIndex], numbers[index]);
+            Heapify(numbers, size, largestIndex);
+        }
     }
 }

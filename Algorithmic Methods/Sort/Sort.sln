@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeapSort", "HeapSort\HeapSo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quicksort", "Quicksort\Quicksort.csproj", "{6A6EED95-877C-4BD6-B46C-75CB1BFBE759}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{DBFD9C3E-9BE5-43C4-9C67-E6A5DD439DEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{6A6EED95-877C-4BD6-B46C-75CB1BFBE759}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A6EED95-877C-4BD6-B46C-75CB1BFBE759}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A6EED95-877C-4BD6-B46C-75CB1BFBE759}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFD9C3E-9BE5-43C4-9C67-E6A5DD439DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFD9C3E-9BE5-43C4-9C67-E6A5DD439DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFD9C3E-9BE5-43C4-9C67-E6A5DD439DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFD9C3E-9BE5-43C4-9C67-E6A5DD439DEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -20,4 +20,18 @@ public static class SortUtilities
             Console.Write(number + " ");
         }
     }
+    
+    /// <summary>
+    /// Creates an array used to test the average-case time complexity scenario
+    /// </summary>
+    public static int[] CreateRandomArray(int size, int lower, int upper)
+    {
+        int[] array = new int[size];
+        Random random = new Random();
+
+        for (int index = 0; index < size; index++)
+            array[index] = random.Next(lower, upper);
+
+        return array;
+    }
 }

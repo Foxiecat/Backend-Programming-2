@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HeapSort")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6add52c587f38c9cc567587682fc6877de676573")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84d4ce8790979303749dd5ce281001d1e6424afb")]
 [assembly: System.Reflection.AssemblyProductAttribute("HeapSort")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HeapSort")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
