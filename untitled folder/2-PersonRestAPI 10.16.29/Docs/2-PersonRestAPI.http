@@ -1,0 +1,30 @@
+@PersonRestAPI_HostAddress = https://localhost:5016
+
+GET {{PersonRestAPI_HostAddress}}/persons
+Accept: application/json
+
+###
+POST {{PersonRestAPI_HostAddress}}/persons
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Ola",
+  "lastName": "Normann",
+  "age": 30
+}
+###
+DELETE {{PersonRestAPI_HostAddress}}/persons/1
+
+###
+PUT {{PersonRestAPI_HostAddress}}/persons/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 1,
+  "firstName": "Ola",
+  "lastName": "Normann",
+  "age": 40
+}

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1-Hello-RestAPI", "1-Hello-RestAPI\1-Hello-RestAPI.csproj", "{8C19DDA3-EB1C-48AE-A3AC-3C5D1886BE33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2-PersonRestAPI", "2-PersonRestAPI\2-PersonRestAPI.csproj", "{3D523A2D-AA20-4769-A8EC-A121689A4B06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C19DDA3-EB1C-48AE-A3AC-3C5D1886BE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C19DDA3-EB1C-48AE-A3AC-3C5D1886BE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C19DDA3-EB1C-48AE-A3AC-3C5D1886BE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C19DDA3-EB1C-48AE-A3AC-3C5D1886BE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D523A2D-AA20-4769-A8EC-A121689A4B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D523A2D-AA20-4769-A8EC-A121689A4B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D523A2D-AA20-4769-A8EC-A121689A4B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D523A2D-AA20-4769-A8EC-A121689A4B06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
