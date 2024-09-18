@@ -1,13 +1,13 @@
-drop database if exists Advanced_Programming;
-create database Advanced_Programming;
-use Advanced_Programming;
+drop database if exists ga_emne7_avansert;
+create database ga_emne7_avansert;
+use ga_emne7_avansert;
 
 # create user
-CREATE USER IF NOT EXISTS 'neptune'@'localhost' IDENTIFIED BY 'n3ptun3';
-CREATE USER IF NOT EXISTS 'neptune'@'%' IDENTIFIED BY 'n3ptun3';
+CREATE USER IF NOT EXISTS 'ga-app'@'localhost' IDENTIFIED BY 'ga-5ecret-%';
+CREATE USER IF NOT EXISTS 'ga-app'@'%' IDENTIFIED BY 'ga-5ecret-%';
 
-GRANT ALL privileges ON Advanced_Programming.* TO 'ga-app'@'%';
-GRANT ALL privileges ON Advanced_Programming.* TO 'ga-app'@'localhost';
+GRANT ALL privileges ON ga_emne7_avansert.* TO 'ga-app'@'%';
+GRANT ALL privileges ON ga_emne7_avansert.* TO 'ga-app'@'localhost';
 
 FLUSH PRIVILEGES;
 

@@ -1,0 +1,89 @@
+2024-09-18 08:56:53.259 +02:00 [INF] Now listening on: https://localhost:7078
+2024-09-18 08:56:53.280 +02:00 [INF] Now listening on: http://localhost:5016
+2024-09-18 08:56:53.281 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 08:56:53.281 +02:00 [INF] Hosting environment: Development
+2024-09-18 08:56:53.281 +02:00 [INF] Content root path: /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI
+2024-09-18 08:56:53.566 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/index.html - null null
+2024-09-18 08:56:53.690 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/index.html - 200 null text/html;charset=utf-8 125.1016ms
+2024-09-18 08:56:53.709 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/swagger-ui.css - null null
+2024-09-18 08:56:53.709 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/swagger-ui-standalone-preset.js - null null
+2024-09-18 08:56:53.709 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/swagger-ui-bundle.js - null null
+2024-09-18 08:56:53.731 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-18 08:56:53.731 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-18 08:56:53.732 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 22.9105ms
+2024-09-18 08:56:53.732 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 23.3375ms
+2024-09-18 08:56:53.731 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-18 08:56:53.734 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/swagger-ui.css - 200 143943 text/css 25.3393ms
+2024-09-18 08:56:53.810 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - null null
+2024-09-18 08:56:53.813 +02:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2024-09-18 08:56:53.881 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7078/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 71.1783ms
+2024-09-18 08:57:10.888 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7078/persons - application/json 74
+2024-09-18 08:57:10.897 +02:00 [INF] Executing endpoint 'HTTP: POST /persons/ => AddPersonAsync'
+2024-09-18 08:57:10.928 +02:00 [INF] Person added: {"Id":0,"FirstName":"string","LastName":"string","Age":0,"$type":"Person"}
+2024-09-18 08:57:11.071 +02:00 [INF] Executed endpoint 'HTTP: POST /persons/ => AddPersonAsync'
+2024-09-18 08:57:11.072 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'ga-app' using method 'sha256_password' failed with message: Access denied for user 'ga-app'@'localhost' (using password: YES)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user 'ga-app'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at PersonRestAPI.Repositories.PersonMySqlDatabase.AddAsync(Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Repositories/PersonMySqlDatabase.cs:line 14
+   at PersonRestAPI.Repositories.PersonMySqlDatabase.AddAsync(Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Repositories/PersonMySqlDatabase.cs:line 28
+   at PersonRestAPI.Endpoints.PersonEndpoints.AddPersonAsync(IPersonRepository repo, ILogger`1 logger, Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Endpoints/PersonEndpoints.cs:line 57
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-18 08:57:11.077 +02:00 [ERR] Could not process a request on Machine Danicas-MacBook-Pro. TraceId:0HN6NLS9UK346:0000000B
+MySql.Data.MySqlClient.MySqlException (0x80004005): Authentication to host 'localhost' for user 'ga-app' using method 'sha256_password' failed with message: Access denied for user 'ga-app'@'localhost' (using password: YES)
+ ---> MySql.Data.MySqlClient.MySqlException (0x80004005): Access denied for user 'ga-app'@'localhost' (using password: YES)
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(MySqlException ex)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacketAsync(Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ContinueAuthenticationAsync(Boolean execAsync, Byte[] data)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.HandleAuthChangeAsync(MySqlPacket packet, Boolean execAsync)
+   at MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticateAsync(Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.AuthenticateAsync(String authMethod, Boolean reset, Boolean execAsync)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.NativeDriver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.Driver.CreateAsync(MySqlConnectionStringBuilder settings, Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriverAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlPool.GetConnectionAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.OpenAsync(Boolean execAsync, CancellationToken cancellationToken)
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at PersonRestAPI.Repositories.PersonMySqlDatabase.AddAsync(Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Repositories/PersonMySqlDatabase.cs:line 14
+   at PersonRestAPI.Repositories.PersonMySqlDatabase.AddAsync(Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Repositories/PersonMySqlDatabase.cs:line 28
+   at PersonRestAPI.Endpoints.PersonEndpoints.AddPersonAsync(IPersonRepository repo, ILogger`1 logger, Person person) in /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/2-PersonRestAPI/Endpoints/PersonEndpoints.cs:line 57
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.ExecuteTaskResult[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<>c__DisplayClass102_2.<<HandleRequestBodyAndCompileRequestDelegateForJson>b__2>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2024-09-18 08:57:11.081 +02:00 [INF] Setting HTTP status code 500.
+2024-09-18 08:57:11.086 +02:00 [INF] Writing value of type 'ProblemDetails' as Json.
+2024-09-18 08:57:11.094 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7078/persons - 500 null application/problem+json 205.9244ms
+2024-09-18 08:57:24.281 +02:00 [INF] Application is shutting down...

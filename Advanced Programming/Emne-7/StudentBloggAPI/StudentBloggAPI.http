@@ -1,0 +1,6 @@
+@StudentBloggAPI_HostAddress = http://localhost:5114
+
+GET {{StudentBloggAPI_HostAddress}}
+Accept: application/json
+
+###

@@ -1,4 +1,5 @@
 using PersonRestAPI.Endpoints;
+using PersonRestAPI.Middleware;
 using PersonRestAPI.Models;
 using PersonRestAPI.Repositories;
 using PersonRestAPI.Repositories.Interfaces;
@@ -10,16 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services
         .AddSingleton<IPersonRepository, PersonMySqlDatabase>()
         .AddSingleton<IRepository<Person>, PersonGenericInMemDB>()
+        .AddExceptionHandler<GlobalExceptionHandling>()
         .AddEndpointsApiExplorer()
         .AddSwaggerGen();
 
     Log.Logger = new LoggerConfiguration()
-        .MinimumLevel.Warning()
+        .MinimumLevel.Information()
         .Enrich.FromLogContext()
         .WriteTo.Console()
-        .WriteTo.File("logs/logs.txt", rollingInterval: RollingInterval.Day)
+        .WriteTo.File("logs/logs-.txt", rollingInterval: RollingInterval.Day)
         .CreateLogger();
-    
+
     builder.Host.UseSerilog();
 }
 
@@ -32,13 +34,14 @@ var app = builder.Build();
         app.UseSwaggerUI();
     }
 
-    app.UseHttpsRedirection();
+    // Registration of middleware
+    app
+        .UseExceptionHandler(_ => { })
+        .UseHttpsRedirection();
 
     // Lager vårt første endepunkt! Metode: GET, https://localhost:7078/persons/
     app.MapPersonEndpoints();
 }
-
-
 
 app.Run();
 

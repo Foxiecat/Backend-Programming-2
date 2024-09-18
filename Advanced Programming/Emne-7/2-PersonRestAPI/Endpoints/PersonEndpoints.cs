@@ -11,8 +11,8 @@ public static class PersonEndpoints
     // MapPersonEndpoints
     public static void MapPersonEndpoints(this WebApplication app)
     {
-        RouteGroupBuilder personGroup = app.MapGroup("/persons");
-
+        var personGroup = app.MapGroup("/persons");
+        
         personGroup.MapGet("", GetPersonsAsync).WithName("GetPersons").WithOpenApi();
         personGroup.MapPost("", AddPersonAsync).WithName("AddPerson").WithOpenApi();
         personGroup.MapDelete("/{id}", DeletePersonAsync).WithName("DeletePerson").WithOpenApi();
@@ -21,7 +21,7 @@ public static class PersonEndpoints
 
     private static async Task<IResult> UpdatePersonAsync(IPersonRepository repo, int id, Person person)
     {
-        Person? p = await repo.UpdateAsync(id, person);
+        var p = await repo.UpdateAsync(id, person);
         return p is null
             ? Results.BadRequest($"Failed to update person with id={id}")
             : Results.Ok(p);
@@ -29,30 +29,32 @@ public static class PersonEndpoints
 
     private static async Task<IResult> DeletePersonAsync(IPersonRepository repo, int id)
     {
-        Person? person = await repo.DeleteByIdAsync(id);
+        var person = await repo.DeleteByIdAsync(id);
         return person is null
             ? Results.BadRequest($"Did`nt find person with id={id}")
             : Results.Ok(person);
     }
 
     private static async Task<IResult> GetPersonsAsync(
-        [FromServices] IPersonRepository repo,
+        [FromServices]IPersonRepository repo, 
         [FromQuery] int? id)
     {
-        ICollection<Person> persons = await repo.GetAllAsync();
+        var persons = await repo.GetAllAsync();
         // hente fra databasen !!
         return id is null
             ? Results.Ok(persons)
             : Results.Ok(persons.Where(p => p.Id == id));
     }
 
-    private static async Task<IResult> AddPersonAsync(IPersonRepository repo,
-                                                      ILogger<Program> logger,
-                                                      Person person)
+    private static async Task<IResult> AddPersonAsync(
+        IPersonRepository repo , 
+        ILogger<Program> logger, 
+        Person person)
     {
-        logger.LogInformation("Adding person with id={@Person}", person);
-
-        Person? p = await repo.AddAsync(person);
+        logger.LogInformation("Person added: {@person}"
+            , person);
+        
+        var p = await repo.AddAsync(person);
         return p is null
             ? Results.BadRequest("Fail to add database")
             : Results.Ok(p);
