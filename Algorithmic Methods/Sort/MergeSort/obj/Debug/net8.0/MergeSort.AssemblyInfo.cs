@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MergeSort")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84d4ce8790979303749dd5ce281001d1e6424afb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec85561dcb21898f2ca4465fff8ad93b57da646b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MergeSort")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MergeSort")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

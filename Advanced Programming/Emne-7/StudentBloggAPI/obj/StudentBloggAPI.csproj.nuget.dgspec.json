@@ -1,26 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/StudentBloggAPI.csproj": {}
+    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\StudentBloggAPI\\StudentBloggAPI.csproj": {}
   },
   "projects": {
-    "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/StudentBloggAPI.csproj": {
+    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\StudentBloggAPI\\StudentBloggAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/StudentBloggAPI.csproj",
+        "projectUniqueName": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\StudentBloggAPI\\StudentBloggAPI.csproj",
         "projectName": "StudentBloggAPI",
-        "projectPath": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/StudentBloggAPI.csproj",
-        "packagesPath": "/Users/neptune/.nuget/packages/",
-        "outputPath": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/",
+        "projectPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\StudentBloggAPI\\StudentBloggAPI.csproj",
+        "packagesPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\StudentBloggAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/neptune/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -79,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

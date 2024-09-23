@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj": {}
+    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj": {}
   },
   "projects": {
-    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj": {
+    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj",
+        "projectUniqueName": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj",
         "projectName": "MergeSort",
-        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj",
-        "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\obj\\",
+        "projectPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\MergeSort.csproj",
+        "packagesPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\MergeSort\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
-                "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj"
+              "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
+                "projectPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj"
               }
             }
           }
@@ -62,21 +62,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\White\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
+    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
+        "projectUniqueName": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
         "projectName": "SortUtilities",
-        "projectPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
-        "packagesPath": "C:\\Users\\White\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\White\\OneDrive\\Dokumenter\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\obj\\",
+        "projectPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\SortUtilities.csproj",
+        "packagesPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Algorithmic Methods\\Sort\\SortUtilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\White\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -120,7 +120,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\White\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
