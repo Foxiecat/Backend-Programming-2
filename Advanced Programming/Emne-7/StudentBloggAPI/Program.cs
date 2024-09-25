@@ -1,5 +1,7 @@
 using System.Configuration;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
+using StudentBloggAPI.Data;
 using StudentBloggAPI.Features.Common.Interfaces;
 using StudentBloggAPI.Features.Users;
 using StudentBloggAPI.Features.Users.Interfaces;
@@ -9,6 +11,13 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IMapper<User, UserDTO>, UserMapper>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+
+// Add DbContext
+builder.Services.AddDbContext<StudentBloggDbContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
+        new MySqlServerVersion(new Version(8, 0, 34))));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

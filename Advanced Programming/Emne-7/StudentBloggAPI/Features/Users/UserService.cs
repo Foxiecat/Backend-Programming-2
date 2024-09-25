@@ -1,4 +1,3 @@
-using System.Diagnostics.Tracing;
 using System.Linq.Expressions;
 using StudentBloggAPI.Features.Common.Interfaces;
 using StudentBloggAPI.Features.Users.Interfaces;
@@ -9,37 +8,21 @@ public class UserService : IUserService
 {
     private readonly ILogger<UserService> _logger;
     private readonly IMapper<User,UserDTO> _userMapper;
+    private readonly IUserRepository _userRepository;
 
-    public UserService(ILogger<UserService> logger, IMapper<User, UserDTO> userMapper)
+    public UserService(ILogger<UserService> logger, IMapper<User, UserDTO> userMapper, IUserRepository userRepository)
     {
         _logger = logger;
         _userMapper = userMapper;
+        _userRepository = userRepository;
     }
-    
-    /*public async Task<IEnumerable<UserDTO>?> GetAllUsersAsync()
+
+    public async Task<UserDTO?> AddAsync(UserDTO entity)
     {
-        await Task.Delay(20);
-
-        User model = new()
-            {
-                Id = Guid.NewGuid(),
-                UserName = "Ola",
-                FirstName = "Ola",
-                LastName = "Normann",
-                CreatedAt = DateTime.UtcNow,
-                UpdatedAt = DateTime.UtcNow,
-                Email = "ola@gmail.com",
-            };
-
-        // MAPPING -> FRA User -> UserDTO
-        UserDTO dto = _userMapper.MapToDTO(model);
+        User model = _userMapper.MapToModel(entity);
+        User? modelResponse = await _userRepository.AddAsync(model);
         
-        // Legg i liste og return til controller
-        return new List<UserDTO>() { dto };
-    }*/
-    public Task<UserDTO?> AddAsync(UserDTO entity)
-    {
-        throw new NotImplementedException();
+        return modelResponse is null ? null : _userMapper.MapToDTO(modelResponse);
     }
 
     public Task<UserDTO?> UpdateAsync(UserDTO entity)
@@ -52,16 +35,19 @@ public class UserService : IUserService
         throw new NotImplementedException();
     }
 
-    public Task<UserDTO?> GetByIdAsync(Guid id)
+    public async Task<UserDTO?> GetByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        User? entity = await _userRepository.GetByIdAsync(id);
+        return entity is null
+            ? null
+            : _userMapper.MapToDTO(entity);
     }
 
     public async Task<IEnumerable<UserDTO>> GetPagedAsync(int pageNumber, int pageSize)
     {
         await Task.Delay(20);
 
-        User model = new()
+        User entity = new()
         {
             Id = Guid.NewGuid(),
             UserName = "Ola",
@@ -75,7 +61,7 @@ public class UserService : IUserService
         };
 
         // MAPPING -> FRA User -> UserDTO
-        UserDTO dto = _userMapper.MapToDTO(model);
+        UserDTO dto = _userMapper.MapToDTO(entity);
         
         // Legg i liste og return til controller
         return new List<UserDTO>() { dto };

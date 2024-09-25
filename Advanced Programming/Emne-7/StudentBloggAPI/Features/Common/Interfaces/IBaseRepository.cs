@@ -1,6 +1,3 @@
 namespace StudentBloggAPI.Features.Common.Interfaces;
 
-public interface IBaseRepository<T>
-{
-    
-}
+public interface IBaseRepository<TEntity, TEntityDTO>;

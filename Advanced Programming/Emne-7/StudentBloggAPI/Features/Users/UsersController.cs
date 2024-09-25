@@ -36,4 +36,23 @@ public class UsersController : ControllerBase
             ? BadRequest("No users found!")
             : Ok(userDTOS);
     }
+
+   [HttpGet("{id}", Name = "GetUserById")]
+    public async Task<ActionResult<UserDTO>> GetUserByIdAsync(Guid id)
+    {
+        UserDTO? userDtos = await _userService.GetByIdAsync(id);
+        return userDtos is null
+            ? BadRequest("No users found")
+            : Ok(userDtos);
+    }
+
+    [HttpPost(Name = "AddUser")]
+    public async Task<ActionResult<UserDTO>> AddUserAsync(UserDTO userDTO)
+    {
+        UserDTO? dtoResponse = await _userService.AddAsync(userDTO);
+        
+        return dtoResponse is null
+            ? BadRequest("Failed to add User")
+            : Ok(dtoResponse);
+    }
 }

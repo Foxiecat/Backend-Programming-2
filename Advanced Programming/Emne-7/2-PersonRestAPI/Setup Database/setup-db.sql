@@ -3,11 +3,11 @@ create database ga_emne7_avansert;
 use ga_emne7_avansert;
 
 # create user
-CREATE USER IF NOT EXISTS 'ga-app'@'localhost' IDENTIFIED BY 'ga-5ecret-%';
-CREATE USER IF NOT EXISTS 'ga-app'@'%' IDENTIFIED BY 'ga-5ecret-%';
+CREATE USER IF NOT EXISTS 'neptune'@'localhost' IDENTIFIED BY 'Progynova2';
+CREATE USER IF NOT EXISTS 'neptune'@'%' IDENTIFIED BY 'Progynova2';
 
-GRANT ALL privileges ON ga_emne7_avansert.* TO 'ga-app'@'%';
-GRANT ALL privileges ON ga_emne7_avansert.* TO 'ga-app'@'localhost';
+GRANT ALL privileges ON ga_emne7_avansert.* TO 'neptune'@'%';
+GRANT ALL privileges ON ga_emne7_avansert.* TO 'neptune'@'localhost';
 
 FLUSH PRIVILEGES;
 

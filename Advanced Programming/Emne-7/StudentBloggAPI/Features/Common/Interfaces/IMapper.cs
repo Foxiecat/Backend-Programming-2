@@ -1,7 +1,7 @@
 namespace StudentBloggAPI.Features.Common.Interfaces;
 
-public interface IMapper<TModel, TEntity>
+public interface IMapper<TEntity, TEntityDTO>
 {
-    TEntity MapToDTO(TModel model);
-    TModel MapToModel(TEntity entityDTO);
+    TEntityDTO MapToDTO(TEntity entity);
+    TEntity MapToModel(TEntityDTO entityDTO);
 }

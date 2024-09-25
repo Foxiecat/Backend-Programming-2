@@ -4,17 +4,17 @@ namespace StudentBloggAPI.Features.Users;
 
 public class UserMapper : IMapper<User, UserDTO>
 {
-    public UserDTO MapToDTO(User model)
+    public UserDTO MapToDTO(User entity)
     {
         return new UserDTO()
         {
-            Id = model.Id,
-            UserName = model.UserName,
-            FirstName = model.FirstName,
-            LastName = model.LastName,
-            Email = model.Email,
-            CreatedAt = model.CreatedAt,
-            UpdatedAt = model.UpdatedAt
+            Id = entity.Id,
+            UserName = entity.UserName,
+            FirstName = entity.FirstName,
+            LastName = entity.LastName,
+            Email = entity.Email,
+            CreatedAt = entity.CreatedAt,
+            UpdatedAt = entity.UpdatedAt
         };
     }
 
