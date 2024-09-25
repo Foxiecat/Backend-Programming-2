@@ -1,5 +1,6 @@
 using System.Configuration;
 using Serilog;
+using StudentBloggAPI.Features.Common.Interfaces;
 using StudentBloggAPI.Features.Users;
 using StudentBloggAPI.Features.Users.Interfaces;
 

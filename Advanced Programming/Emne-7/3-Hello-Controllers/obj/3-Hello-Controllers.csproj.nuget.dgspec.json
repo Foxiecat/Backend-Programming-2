@@ -1,25 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\3-Hello-Controllers\\3-Hello-Controllers.csproj": {}
+    "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/3-Hello-Controllers/3-Hello-Controllers.csproj": {}
   },
   "projects": {
-    "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\3-Hello-Controllers\\3-Hello-Controllers.csproj": {
+    "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/3-Hello-Controllers/3-Hello-Controllers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\3-Hello-Controllers\\3-Hello-Controllers.csproj",
+        "projectUniqueName": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/3-Hello-Controllers/3-Hello-Controllers.csproj",
         "projectName": "3-Hello-Controllers",
-        "projectPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\3-Hello-Controllers\\3-Hello-Controllers.csproj",
-        "packagesPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\Documents\\1. School\\Year 2\\Backend-Programming-2\\Advanced Programming\\Emne-7\\3-Hello-Controllers\\obj\\",
+        "projectPath": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/3-Hello-Controllers/3-Hello-Controllers.csproj",
+        "packagesPath": "/Users/neptune/.nuget/packages/",
+        "outputPath": "/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/3-Hello-Controllers/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/neptune/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,11 +33,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -67,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\foxiecat.DESKTOP-7MFF3K5\\.dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

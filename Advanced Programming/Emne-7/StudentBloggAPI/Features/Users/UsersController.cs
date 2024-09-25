@@ -30,9 +30,9 @@ public class UsersController : ControllerBase
     [HttpGet(Name = "GetUser")]
     public async Task<ActionResult<IEnumerable<UserDTO[]>>> GetUsersAsync()
     {
-        IEnumerable<UserDTO>? userDTOS = await _userService.GetAllUsersAsync();
+        IEnumerable<UserDTO> userDTOS = await _userService.GetPagedAsync(0, 0);
         
-        return userDTOS is null 
+        return userDTOS.Any()
             ? BadRequest("No users found!")
             : Ok(userDTOS);
     }
