@@ -1,4 +1,4 @@
-using StudentBloggAPI.Features.Common.Interfaces;
+﻿using StudentBloggAPI.Features.Common.Interfaces;
 
 namespace StudentBloggAPI.Features.Users;
 
@@ -6,15 +6,15 @@ public class UserMapper : IMapper<User, UserDTO>
 {
     public UserDTO MapToDTO(User entity)
     {
-        return new UserDTO()
+        return new UserDTO
         {
             Id = entity.Id,
-            UserName = entity.UserName,
+            Email = entity.Email,
+            Created = entity.Created,
+            Updated = entity.Created,
             FirstName = entity.FirstName,
             LastName = entity.LastName,
-            Email = entity.Email,
-            CreatedAt = entity.CreatedAt,
-            UpdatedAt = entity.UpdatedAt
+            UserName = entity.UserName
         };
     }
 
@@ -22,15 +22,15 @@ public class UserMapper : IMapper<User, UserDTO>
     {
         return new User()
         {
-            Id = entityDTO.Id,
-            UserName = entityDTO.UserName,
+            Created = entityDTO.Created,
             FirstName = entityDTO.FirstName,
-            LastName = entityDTO.LastName,
             Email = entityDTO.Email,
-            CreatedAt = entityDTO.CreatedAt,
-            UpdatedAt = entityDTO.UpdatedAt
+            UserName = entityDTO.UserName,
+            Updated = entityDTO.Updated,
+            Id = entityDTO.Id,
+            LastName = entityDTO.LastName
             // HashedPassword => registrerings process -> da blir denne satt
-            // IsAdmin => ved innlogging -> httpcontext som vi senere kan bruke
+            // IsAdminUser => ved innlogging -> httpcontext som vi senere kan bruke !
         };
     }
 }

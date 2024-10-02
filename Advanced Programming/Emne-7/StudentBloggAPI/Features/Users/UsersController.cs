@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using StudentBloggAPI.Features.Users.Interfaces;
 
 namespace StudentBloggAPI.Features.Users;
-
 
 [ApiController]
 [Route("api/v1/[controller]")]
@@ -11,7 +10,7 @@ public class UsersController : ControllerBase
     private readonly ILogger<UsersController> _logger;
     private readonly IUserService _userService;
 
-    // Henter logger fra DI-Container, gjøres alltid i konstructoren
+    // henter logger fra DI-Container, gjøres alltid i konstruktøren 
     public UsersController(ILogger<UsersController> logger, IUserService userService)
     {
         _logger = logger;
@@ -21,38 +20,49 @@ public class UsersController : ControllerBase
     [HttpGet("hello", Name = "SayHello")]
     public async Task<ActionResult<string>> SayHello()
     {
-        _logger.LogInformation("SayHello");
-        
+        _logger.LogInformation("Hello from API");
         await Task.Delay(20);
-        return Ok("Hello from API");
+        return Ok("hello from API");
     }
     
-    [HttpGet(Name = "GetUser")]
-    public async Task<ActionResult<IEnumerable<UserDTO[]>>> GetUsersAsync()
+    [HttpGet(Name = "GetUsers")]
+    public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsersAsync(
+        [FromQuery] UserSearchParameters? searchParameters,
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 10)
     {
-        IEnumerable<UserDTO> userDTOS = await _userService.GetPagedAsync(0, 0);
+            
+        if (searchParameters.UserName is null &&
+            searchParameters.FirstName is null &&
+            searchParameters.LastName is null &&
+            searchParameters.Email is null)
+        {
+            IEnumerable<UserDTO> userDtos = await _userService.GetPagedAsync(pageNumber, pageSize);
+            return Ok(userDtos);
+        }
         
-        return userDTOS.Any()
-            ? BadRequest("No users found!")
-            : Ok(userDTOS);
+        return Ok(await _userService.FindAsync(searchParameters));
     }
-
-   [HttpGet("{id}", Name = "GetUserById")]
+    
+    [HttpGet("{id}", Name = "GetUserByIdAsync")]
     public async Task<ActionResult<UserDTO>> GetUserByIdAsync(Guid id)
     {
-        UserDTO? userDtos = await _userService.GetByIdAsync(id);
-        return userDtos is null
-            ? BadRequest("No users found")
-            : Ok(userDtos);
+        UserDTO? userDto = await _userService.GetByIdAsync(id);
+        return userDto is null
+            ? BadRequest("User not found")
+            : Ok(userDto);
     }
-
-    [HttpPost(Name = "AddUser")]
-    public async Task<ActionResult<UserDTO>> AddUserAsync(UserDTO userDTO)
+    
+    //  dotnet add package Microsoft.EntityFrameworkCore --version 8.0.8
+    // https:localhost:7004/api/users/register
+    [HttpPost("register", Name = "RegisterUserAsync")]
+    public async Task<ActionResult<UserDTO>> RegisterUserAsync(UserRegistrationDTO registrationDTO)
     {
-        UserDTO? dtoResponse = await _userService.AddAsync(userDTO);
-        
-        return dtoResponse is null
-            ? BadRequest("Failed to add User")
-            : Ok(dtoResponse);
+        var user = await _userService.RegisterAsync(registrationDTO);
+        return user is null
+            ? BadRequest("User not registered")
+            : Ok(user);
     }
+    
+    //public async Task<ActionResult<UserDTO>> FindAsync()
 }

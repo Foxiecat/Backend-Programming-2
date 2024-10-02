@@ -27,7 +27,7 @@ public class PersonInMemoryDataStorage : IPersonRepository
     {
         await Task.Delay(10);
         // vi må fjerne riktig person fra listen hvis personen finnes.
-        var p = _dbInMemStorage.FirstOrDefault(p => p.Id == id);
+        Person? p = _dbInMemStorage.FirstOrDefault(p => p.Id == id);
 
         if (p is not null)
         {
@@ -46,7 +46,7 @@ public class PersonInMemoryDataStorage : IPersonRepository
     public async Task<Person?> UpdateAsync(int id, Person person)
     {
         await Task.Delay(10);
-        var p = _dbInMemStorage.FirstOrDefault(p => p.Id == id);
+        Person? p = _dbInMemStorage.FirstOrDefault(p => p.Id == id);
         if (p is null) return null;
 
         p.FirstName = person.FirstName;

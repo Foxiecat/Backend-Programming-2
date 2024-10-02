@@ -1,11 +1,13 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using StudentBloggAPI.Features.Comments;
+using StudentBloggAPI.Features.Posts;
 
 namespace StudentBloggAPI.Features.Users;
 
 public class User
 {
     [Key]
-    public Guid Id { get; init;  }
+    public Guid Id { get; set; }
     
     [Required]
     [MinLength(3), MaxLength(30)]
@@ -27,11 +29,15 @@ public class User
     public string HashedPassword { get; set; } = string.Empty;
     
     [Required]
-    public DateTime CreatedAt { get; set; }
+    public DateTime Created { get; set; }
     
     [Required]
-    public DateTime UpdatedAt { get; set; }
+    public DateTime Updated { get; set; }
     
     [Required]
-    public bool IsAdmin { get; set; }
+    public bool IsAdminUser { get; set; }
+    
+    // Navigation properties
+    public virtual ICollection<Post> Posts { get; set; } = new HashSet<Post>();
+    public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
 }

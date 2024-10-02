@@ -1,6 +1,0 @@
-@_2_PersonRestAPI_HostAddress = http://localhost:5173
-
-GET {{_2_PersonRestAPI_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

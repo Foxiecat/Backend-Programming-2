@@ -18,7 +18,7 @@ public class GlobalExceptionHandling(ILogger<GlobalExceptionHandling> logger) : 
 
         // Mapping
         // statuscode and title
-        var (statusCode, title) = MapException(exception);
+        (int statusCode, string? title) = MapException(exception);
         
         await Results.Problem(
             title: title,

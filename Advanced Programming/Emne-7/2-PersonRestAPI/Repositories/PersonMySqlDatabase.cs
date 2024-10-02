@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using System.Data.Common;
+using MySql.Data.MySqlClient;
 using PersonRestAPI.Models;
 using PersonRestAPI.Repositories.Interfaces;
 
@@ -13,7 +14,7 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
         await using MySqlConnection conn = new(_connectionString);
         conn.Open();
 
-        var query = "INSERT INTO Person (FirstName, LastName, Age) VALUES (@FirstName, @LastName, @Age)";
+        string? query = "INSERT INTO Person (FirstName, LastName, Age) VALUES (@FirstName, @LastName, @Age)";
         MySqlCommand cmd = new(query, conn);
         cmd.Parameters.AddWithValue("@FirstName", person.FirstName);
         cmd.Parameters.AddWithValue("@LastName", person.LastName);
@@ -34,13 +35,13 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
         await using MySqlConnection conn = new(_connectionString);
         conn.Open();
 
-        var query = "SELECT * FROM Person";
+        string? query = "SELECT * FROM Person";
         MySqlCommand cmd = new(query, conn);
 
-        await using var reader = await cmd.ExecuteReaderAsync();
+        await using DbDataReader? reader = await cmd.ExecuteReaderAsync();
         while (await reader.ReadAsync())
         {
-            var person = new Person()
+            Person? person = new Person()
             {
                 Id = reader.GetInt32(0),
                 FirstName = reader.GetString(1),
@@ -54,11 +55,11 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
 
     public async Task<Person?> DeleteByIdAsync(int id)
     {
-        var personToDelete = await GetByIdAsync(id);
+        Person? personToDelete = await GetByIdAsync(id);
         await using MySqlConnection conn = new(_connectionString);
         conn.Open();
 
-        var query = "DELETE FROM Person where Id = @Id";
+        string? query = "DELETE FROM Person where Id = @Id";
         MySqlCommand cmd = new(query, conn);
         cmd.Parameters.AddWithValue("@Id", id);
 
@@ -75,11 +76,11 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
         await using MySqlConnection conn = new(_connectionString);
         conn.Open();
 
-        var query = "SELECT Id, FirstName, LastName, Age FROM Person where id = @Id";
+        string? query = "SELECT Id, FirstName, LastName, Age FROM Person where id = @Id";
         MySqlCommand cmd = new(query, conn);
         cmd.Parameters.AddWithValue("Id", id);
         
-        await using var reader = await cmd.ExecuteReaderAsync();
+        await using DbDataReader? reader = await cmd.ExecuteReaderAsync();
         while (await reader.ReadAsync())
         {
             return new Person()
@@ -99,7 +100,7 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
         await using MySqlConnection conn = new(_connectionString);
         conn.Open();
 
-        var query = "UPDATE Person SET FirstName=@FirstName, LastName=@LastName, Age=@Age WHERE Id=@Id";
+        string? query = "UPDATE Person SET FirstName=@FirstName, LastName=@LastName, Age=@Age WHERE Id=@Id";
         MySqlCommand cmd = new(query, conn);
 
         cmd.Parameters.AddWithValue("@FirstName", person.FirstName);
@@ -107,7 +108,7 @@ public class PersonMySqlDatabase(IConfiguration configuration) : IPersonReposito
         cmd.Parameters.AddWithValue("@Age", person.Age);
         cmd.Parameters.AddWithValue("@Id", person.Id);
 
-        var rowEffectedCount = await cmd.ExecuteNonQueryAsync();
+        int rowEffectedCount = await cmd.ExecuteNonQueryAsync();
         if (rowEffectedCount == 0)
             return null;
 

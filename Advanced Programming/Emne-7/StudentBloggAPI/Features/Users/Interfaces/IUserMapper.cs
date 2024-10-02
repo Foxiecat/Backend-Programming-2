@@ -1,7 +1,7 @@
-namespace StudentBloggAPI.Features.Users.Interfaces;
+﻿namespace StudentBloggAPI.Features.Users.Interfaces;
 
 public interface IUserMapper
 {
-    UserDTO MapToDTO(User user);
-    User MapToModel(UserDTO userDTO);
+    UserDTO MapToDTO(User model);
+    User MapToModel(UserDTO dto);
 }

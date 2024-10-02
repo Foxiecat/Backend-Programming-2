@@ -11,7 +11,7 @@ public static class PersonEndpoints
     // MapPersonEndpoints
     public static void MapPersonEndpoints(this WebApplication app)
     {
-        var personGroup = app.MapGroup("/persons");
+        RouteGroupBuilder? personGroup = app.MapGroup("/persons");
         
         personGroup.MapGet("", GetPersonsAsync).WithName("GetPersons").WithOpenApi();
         personGroup.MapPost("", AddPersonAsync).WithName("AddPerson").WithOpenApi();
@@ -21,7 +21,7 @@ public static class PersonEndpoints
 
     private static async Task<IResult> UpdatePersonAsync(IPersonRepository repo, int id, Person person)
     {
-        var p = await repo.UpdateAsync(id, person);
+        Person? p = await repo.UpdateAsync(id, person);
         return p is null
             ? Results.BadRequest($"Failed to update person with id={id}")
             : Results.Ok(p);
@@ -29,7 +29,7 @@ public static class PersonEndpoints
 
     private static async Task<IResult> DeletePersonAsync(IPersonRepository repo, int id)
     {
-        var person = await repo.DeleteByIdAsync(id);
+        Person? person = await repo.DeleteByIdAsync(id);
         return person is null
             ? Results.BadRequest($"Did`nt find person with id={id}")
             : Results.Ok(person);
@@ -39,7 +39,7 @@ public static class PersonEndpoints
         [FromServices]IPersonRepository repo, 
         [FromQuery] int? id)
     {
-        var persons = await repo.GetAllAsync();
+        ICollection<Person>? persons = await repo.GetAllAsync();
         // hente fra databasen !!
         return id is null
             ? Results.Ok(persons)
@@ -54,7 +54,7 @@ public static class PersonEndpoints
         logger.LogInformation("Person added: {@person}"
             , person);
         
-        var p = await repo.AddAsync(person);
+        Person? p = await repo.AddAsync(person);
         return p is null
             ? Results.BadRequest("Fail to add database")
             : Results.Ok(p);

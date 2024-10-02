@@ -1,5 +1,7 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using StudentBloggAPI.Features.Comments;
+using StudentBloggAPI.Features.Users;
 
 namespace StudentBloggAPI.Features.Posts;
 
@@ -12,7 +14,7 @@ public class Post
     public Guid UserId { get; set; }
     
     [Required]
-    [MinLength(3), MaxLength(50)]
+    [MinLength(3) , MaxLength(50)]
     public string Title { get; set; } = string.Empty;
     
     [Required]
@@ -20,4 +22,9 @@ public class Post
     
     [Required]
     public DateTime DatePosted { get; set; }
+    
+    // Navigation properties
+    public virtual User? User { get; set; }
+    public virtual ICollection<Comment> Comments { get; set; } = new HashSet<Comment>();
+    
 }

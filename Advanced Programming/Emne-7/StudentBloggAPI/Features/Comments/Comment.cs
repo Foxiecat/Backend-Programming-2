@@ -1,18 +1,18 @@
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using StudentBloggAPI.Features.Posts;
 using StudentBloggAPI.Features.Users;
 
 namespace StudentBloggAPI.Features.Comments;
 
-public class Comments
+public class Comment
 {
     [Key]
     public Guid Id { get; set; }
     
     [ForeignKey("PostId")]
     public Guid PostId { get; set; }
-    
+
     [ForeignKey("UserId")]
     public Guid UserId { get; set; }
     

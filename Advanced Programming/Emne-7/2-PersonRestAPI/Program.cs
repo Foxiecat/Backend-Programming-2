@@ -5,7 +5,7 @@ using PersonRestAPI.Repositories;
 using PersonRestAPI.Repositories.Interfaces;
 using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder? builder = WebApplication.CreateBuilder(args);
 {
     // vi legger inn i container er: Klasse som implementerer IPersonRepository
     builder.Services
@@ -25,7 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Host.UseSerilog();
 }
 
-var app = builder.Build();
+WebApplication? app = builder.Build();
 {
     // Configure the HTTP request pipeline.
     if (app.Environment.IsDevelopment())

@@ -1,13 +1,13 @@
-namespace StudentBloggAPI.Features.Users;
+﻿namespace StudentBloggAPI.Features.Users;
+
 
 public class UserDTO
 {
-    public Guid Id { get; init;  }
+    public Guid Id { get; init; }
     public string UserName { get; init; } = string.Empty;
     public string FirstName { get; init; } = string.Empty;
     public string LastName { get; init; } = string.Empty;
     public string Email { get; init; } = string.Empty;
-    public DateTime CreatedAt { get; init; }
-    public DateTime UpdatedAt { get; init; }
-
+    public DateTime Created { get; init; }
+    public DateTime Updated { get; init; }
 }

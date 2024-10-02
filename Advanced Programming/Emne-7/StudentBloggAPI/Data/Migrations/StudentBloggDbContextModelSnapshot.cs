@@ -22,7 +22,7 @@ namespace StudentBloggAPI.Data.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
-            modelBuilder.Entity("StudentBloggAPI.Features.Comments.Comments", b =>
+            modelBuilder.Entity("StudentBloggAPI.Features.Comments.Comment", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -73,6 +73,8 @@ namespace StudentBloggAPI.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("UserId");
+
                     b.ToTable("Posts");
                 });
 
@@ -82,12 +84,12 @@ namespace StudentBloggAPI.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("char(36)");
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<DateTime>("Created")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -98,7 +100,7 @@ namespace StudentBloggAPI.Data.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<bool>("IsAdmin")
+                    b.Property<bool>("IsAdminUser")
                         .HasColumnType("tinyint(1)");
 
                     b.Property<string>("LastName")
@@ -106,7 +108,7 @@ namespace StudentBloggAPI.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50)");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime>("Updated")
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("UserName")
@@ -116,19 +118,25 @@ namespace StudentBloggAPI.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
+
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("StudentBloggAPI.Features.Comments.Comments", b =>
+            modelBuilder.Entity("StudentBloggAPI.Features.Comments.Comment", b =>
                 {
                     b.HasOne("StudentBloggAPI.Features.Posts.Post", "Post")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("StudentBloggAPI.Features.Users.User", "User")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -136,6 +144,29 @@ namespace StudentBloggAPI.Data.Migrations
                     b.Navigation("Post");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StudentBloggAPI.Features.Posts.Post", b =>
+                {
+                    b.HasOne("StudentBloggAPI.Features.Users.User", "User")
+                        .WithMany("Posts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StudentBloggAPI.Features.Posts.Post", b =>
+                {
+                    b.Navigation("Comments");
+                });
+
+            modelBuilder.Entity("StudentBloggAPI.Features.Users.User", b =>
+                {
+                    b.Navigation("Comments");
+
+                    b.Navigation("Posts");
                 });
 #pragma warning restore 612, 618
         }
