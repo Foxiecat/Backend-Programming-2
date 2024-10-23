@@ -12,8 +12,8 @@ using StudentBloggAPI.Data;
 namespace StudentBloggAPI.Data.Migrations
 {
     [DbContext(typeof(StudentBloggDbContext))]
-    [Migration("20241002101325_StudentBloggDB")]
-    partial class StudentBloggDB
+    [Migration("20241002101749_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

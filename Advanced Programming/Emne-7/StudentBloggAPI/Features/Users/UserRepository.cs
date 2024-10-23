@@ -30,9 +30,16 @@ public class UserRepository : IUserRepository
         throw new NotImplementedException();
     }
 
-    public Task<User?> DeleteAsync(Guid id)
+    public async Task<User?> DeleteByIdAsync(Guid id)
     {
-        throw new NotImplementedException();
+        var user = await _dbContext.Users.FindAsync(id);
+        await _dbContext.Users
+            .Where(u => u.Id == id)
+            .ExecuteDeleteAsync();
+        
+        await _dbContext.SaveChangesAsync();
+        return user;
+
     }
 
     public async Task<User?> GetByIdAsync(Guid id)
@@ -43,9 +50,9 @@ public class UserRepository : IUserRepository
     public async Task<IEnumerable<User>> GetPagedAsync(int pageNumber, int pageSize)
     {
         int skip = (pageNumber - 1) * pageSize;
-        
-        List<User> users = await _dbContext.Users
-            .OrderBy(user => user.Id)
+
+        var users = await _dbContext.Users
+            .OrderBy(u => u.Id)
             .Skip(skip)
             .Take(pageSize)
             .ToListAsync();

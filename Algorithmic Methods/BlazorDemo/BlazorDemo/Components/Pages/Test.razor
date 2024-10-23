@@ -1,0 +1,28 @@
+@page "/Test"
+<h3>Test</h3>
+
+<div>
+    My name is @name. My name starts with @char.ToUpper(name[0]).
+</div>
+
+<div>
+    <h1>@message</h1>
+    @if (name == "Sophia")
+    {
+        <p>hello</p>
+    }
+</div>
+<div>
+    <p>@DateTime.Now</p>
+</div>
+
+@code {
+    string name = "Sophia";
+
+    string message = "This is a message";
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = DateTime.Now.ToLongDateString();
+    }
+}

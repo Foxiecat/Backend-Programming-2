@@ -1,28 +1,29 @@
-using StudentBloggAPI.Features.Common.Interfaces;
+﻿using StudentBloggAPI.Features.Common.Interfaces;
 
 namespace StudentBloggAPI.Features.Users;
 
 public class UserRegistrationMapper : IMapper<User, UserRegistrationDTO>
 {
-    public UserRegistrationDTO MapToDTO(User entity)
+    public UserRegistrationDTO MapToDTO(User model)
     {
+        // Denne får vi nok aldri bruk for !! Hvorfor? Skal ikke tilbake til client!
         return new UserRegistrationDTO()
         {
-            UserName = entity.UserName,
-            FirstName = entity.FirstName,
-            LastName = entity.LastName,
-            Email = entity.Email
+            UserName = model.UserName,
+            Email = model.Email,
+            FirstName = model.FirstName,
+            LastName = model.LastName
         };
     }
 
-    public User MapToModel(UserRegistrationDTO entityDTO)
+    public User MapToModel(UserRegistrationDTO dto)
     {
         return new User()
         {
-            UserName = entityDTO.UserName!,
-            FirstName = entityDTO.FirstName!,
-            LastName = entityDTO.LastName!,
-            Email = entityDTO.Email ?? string.Empty
+            Email = dto.Email ?? string.Empty,
+            FirstName = dto.FirstName!,
+            LastName = dto.LastName!,
+            UserName = dto.UserName!
         };
     }
 }

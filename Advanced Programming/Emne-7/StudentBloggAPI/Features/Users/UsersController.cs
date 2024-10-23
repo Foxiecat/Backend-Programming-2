@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Org.BouncyCastle.Asn1;
 using StudentBloggAPI.Features.Users.Interfaces;
 
 namespace StudentBloggAPI.Features.Users;
@@ -17,6 +18,7 @@ public class UsersController : ControllerBase
         _userService = userService;
     }
     
+    
     [HttpGet("hello", Name = "SayHello")]
     public async Task<ActionResult<string>> SayHello()
     {
@@ -25,44 +27,57 @@ public class UsersController : ControllerBase
         return Ok("hello from API");
     }
     
+    
     [HttpGet(Name = "GetUsers")]
     public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsersAsync(
-        [FromQuery] UserSearchParameters? searchParameters,
-        [FromQuery] int pageNumber = 1,
+        [FromQuery] UserSearchParams? searchParams,
+        [FromQuery] int pageNr = 1, 
         [FromQuery] int pageSize = 10)
     {
-            
-        if (searchParameters.UserName is null &&
-            searchParameters.FirstName is null &&
-            searchParameters.LastName is null &&
-            searchParameters.Email is null)
+        if (searchParams?.FirstName is null &&
+            searchParams?.LastName is null &&
+            searchParams?.Email is null &&
+            searchParams?.UserName is null)
         {
-            IEnumerable<UserDTO> userDtos = await _userService.GetPagedAsync(pageNumber, pageSize);
+            var userDtos = await _userService.GetPagedAsync(pageNr,pageSize);
             return Ok(userDtos);
         }
-        
-        return Ok(await _userService.FindAsync(searchParameters));
+        return Ok(await _userService.FindAsync(searchParams));
     }
+    
     
     [HttpGet("{id}", Name = "GetUserByIdAsync")]
     public async Task<ActionResult<UserDTO>> GetUserByIdAsync(Guid id)
     {
-        UserDTO? userDto = await _userService.GetByIdAsync(id);
+        var userDto = await _userService.GetByIdAsync(id);
         return userDto is null
             ? BadRequest("User not found")
             : Ok(userDto);
     }
     
+    
     //  dotnet add package Microsoft.EntityFrameworkCore --version 8.0.8
-    // https:localhost:7004/api/users/register
-    [HttpPost("register", Name = "RegisterUserAsync")]
-    public async Task<ActionResult<UserDTO>> RegisterUserAsync(UserRegistrationDTO registrationDTO)
+    // https://localhost:54634/api/v1/users/register
+    [HttpPost("register",Name = "RegisterUserAsync")]
+    public async Task<ActionResult<UserDTO>> RegisterUserAsync(UserRegistrationDTO dto)
     {
-        var user = await _userService.RegisterAsync(registrationDTO);
+        var user = await _userService.RegisterAsync(dto);
         return user is null
-            ? BadRequest("User not registered")
+            ? BadRequest("Failed to register new user")
             : Ok(user);
     }
+
     
-    //public async Task<ActionResult<UserDTO>> FindAsync()
+    [HttpDelete("{id}", Name = "DeleteUserAsync")]
+    public async Task<ActionResult<bool>> DeleteUserAsync(Guid id)
+    {
+        _logger.LogDebug("Deleting user with id: ({UserID})", id);
+        var result = await _userService.DeleteByIdAsync(id);
+        
+        return result
+            ? Ok(result)
+            : BadRequest($"Failed to delete user with id={id}");
+    }
+    
+
 }

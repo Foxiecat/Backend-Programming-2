@@ -2,6 +2,6 @@
 
 public interface IMapper<TModel, TDto>
 {
-    TDto MapToDTO(TModel entity);
-    TModel MapToModel(TDto entityDTO);
+    TDto MapToDTO(TModel model);
+    TModel MapToModel(TDto dto);
 }

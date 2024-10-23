@@ -4,31 +4,31 @@ namespace StudentBloggAPI.Features.Users;
 
 public class UserMapper : IMapper<User, UserDTO>
 {
-    public UserDTO MapToDTO(User entity)
+    public UserDTO MapToDTO(User model)
     {
-        return new UserDTO
+        return new UserDTO()
         {
-            Id = entity.Id,
-            Email = entity.Email,
-            Created = entity.Created,
-            Updated = entity.Created,
-            FirstName = entity.FirstName,
-            LastName = entity.LastName,
-            UserName = entity.UserName
+            Id = model.Id,
+            FirstName = model.FirstName,
+            LastName = model.LastName,
+            UserName = model.UserName,
+            Email = model.Email,
+            Created = model.Created,
+            Updated = model.Updated,
         };
     }
 
-    public User MapToModel(UserDTO entityDTO)
+    public User MapToModel(UserDTO dto)
     {
         return new User()
         {
-            Created = entityDTO.Created,
-            FirstName = entityDTO.FirstName,
-            Email = entityDTO.Email,
-            UserName = entityDTO.UserName,
-            Updated = entityDTO.Updated,
-            Id = entityDTO.Id,
-            LastName = entityDTO.LastName
+            Id = dto.Id,
+            FirstName = dto.FirstName,
+            LastName = dto.LastName,
+            UserName = dto.UserName,
+            Email = dto.Email,
+            Created = dto.Created,
+            Updated = dto.Updated,
             // HashedPassword => registrerings process -> da blir denne satt
             // IsAdminUser => ved innlogging -> httpcontext som vi senere kan bruke !
         };

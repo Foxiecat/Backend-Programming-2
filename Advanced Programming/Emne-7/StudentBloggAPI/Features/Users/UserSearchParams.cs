@@ -1,6 +1,6 @@
-namespace StudentBloggAPI.Features.Users;
+﻿namespace StudentBloggAPI.Features.Users;
 
-public class UserSearchParameters
+public class UserSearchParams
 {
     public string? UserName { get; init; }
     public string? FirstName { get; init; }

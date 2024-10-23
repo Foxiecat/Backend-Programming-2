@@ -7,6 +7,7 @@ namespace StudentBloggAPI.Data;
 
 public class StudentBloggDbContext : DbContext
 {
+    // kjempe viktig
     public StudentBloggDbContext(DbContextOptions<StudentBloggDbContext> options)
     : base(options)
     {
@@ -22,11 +23,12 @@ public class StudentBloggDbContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.Property(user => user.Email).IsRequired();
+            entity.Property(p => p.Email).IsRequired();
             
-            // Unik
-            entity.HasIndex(user => user.UserName).IsUnique();
-            entity.HasIndex( user => user.Email).IsUnique();
+            // uniqe
+            entity.HasIndex(u => u.Email).IsUnique();
+            entity.HasIndex(u => u.UserName).IsUnique();
         });
+
     }
 }

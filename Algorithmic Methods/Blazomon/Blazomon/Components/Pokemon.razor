@@ -1,0 +1,37 @@
+@using Blazomon.Components.Pages
+@using Newtonsoft.Json
+@attribute [StreamRendering]
+
+@if (loaded)
+{
+    <h3>@pokemonData.name</h3>
+    
+    <img src="@pokemonData.sprites.front_default"/>
+}
+else
+{
+    <p>Loading...</p>
+}
+
+
+@code {
+    bool loaded = false;
+    PokemonData pokemonData;
+    
+    [Parameter] public int num { get; set; }
+    [Parameter] public Home parent { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        HttpClient httpClient = new();
+        
+        string url = $"https://pokeapi.co/api/v2/pokemon/{num}";
+        HttpResponseMessage response = await httpClient.GetAsync(url);
+
+        string jsonResponse = await response.Content.ReadAsStringAsync();
+
+        pokemonData = JsonConvert.DeserializeObject<PokemonData>(jsonResponse);
+
+        loaded = true;
+    }
+}

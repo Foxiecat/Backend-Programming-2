@@ -136,6 +136,10 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/BCrypt.Net-Next.dll
+C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/Scrutor.dll
+C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.dll
+C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Programmering/students/emne-7-avsprog/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/appsettings.Development.json
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/appsettings.json
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/StudentBloggAPI
@@ -143,6 +147,7 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/StudentBloggAPI.runtimeconfig.json
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/StudentBloggAPI.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/StudentBloggAPI.pdb
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/BCrypt.Net-Next.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Google.Protobuf.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Humanizer.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/K4os.Compression.LZ4.dll
@@ -166,6 +171,7 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/BouncyCastle.Crypto.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Scrutor.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.AspNetCore.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.Extensions.Hosting.dll
@@ -176,6 +182,8 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.Sinks.Debug.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.Sinks.File.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Serilog.Sinks.MySQL.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Filters.Abstractions.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -275,4 +283,3 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/StudentBloggAPI.pdb
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/StudentBloggAPI.genruntimeconfig.cache
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/ref/StudentBloggAPI.dll
-/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/BCrypt.Net-Next.dll

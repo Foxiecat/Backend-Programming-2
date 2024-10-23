@@ -1,4 +1,4 @@
-namespace StudentBloggAPI.Features.Users;
+﻿namespace StudentBloggAPI.Features.Users;
 
 public class UserRegistrationDTO
 {
@@ -7,5 +7,4 @@ public class UserRegistrationDTO
     public string? LastName { get; set; }
     public string? Email { get; set; }
     public string? Password { get; set; }
-    
 }
