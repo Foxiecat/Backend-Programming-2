@@ -9,7 +9,7 @@ namespace StudentBloggAPI.IntegrationTests;
 
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
-    public Mock<IUserRepository> UserRepositoryMock { get; set; } = new();
+    public Mock<IUserRepository> MockUserRepository { get; set; } = new();
 
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
@@ -17,7 +17,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 
         builder.ConfigureTestServices(services =>
         {
-            services.AddSingleton(UserRepositoryMock.Object);
+            //services.AddSingleton(MockUserRepository.Object);
         });
     }
 }
