@@ -283,3 +283,6 @@ C:/Users/Yngve/OneDrive - GOKSTAD AKADEMIET AS/ga-code/24-25/Emne 7 Avansert Pro
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/StudentBloggAPI.pdb
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/StudentBloggAPI.genruntimeconfig.cache
 /Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/obj/Debug/net8.0/ref/StudentBloggAPI.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/FluentValidation.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/neptune/Documents/School/Year 2/Advanced Programming/Emne-7/StudentBloggAPI/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll

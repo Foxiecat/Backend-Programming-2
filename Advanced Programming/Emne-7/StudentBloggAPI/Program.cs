@@ -1,7 +1,10 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using StudentBloggAPI.Configurations;
 using StudentBloggAPI.Data;
+using StudentBloggAPI.Data.Health;
 using StudentBloggAPI.Extensions;
 using StudentBloggAPI.Features.Users;
 using StudentBloggAPI.Features.Common.Interfaces;
@@ -18,6 +21,14 @@ builder.Services
     .AddScoped<IMapper<User, UserDTO>, UserMapper>()
     .AddScoped<IMapper<User, UserRegistrationDTO>, UserRegistrationMapper>()
     .AddScoped<IUserRepository, UserRepository>();
+
+builder.Services
+    .AddValidatorsFromAssemblyContaining<Program>()
+    .AddFluentValidationAutoValidation(config 
+        => config.DisableDataAnnotationsValidation = true);
+
+builder.Services.AddHealthChecks()
+    .AddCheck<DatabaseHealthCheck>("Database health check");
 
 builder.Services
     .AddScoped<StudentBloggBasicAuthentication>()
@@ -50,6 +61,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection()
+    .UseHealthChecks("/_health")
     .UseMiddleware<StudentBloggBasicAuthentication>()
     .UseAuthorization();
 

@@ -26,6 +26,7 @@ public class UserService : IUserService
         _userRepository = userRepository;
         _httpContextAccessor = httpContextAccessor;
     }
+    
     public async Task<UserDTO?> AddAsync(UserDTO dto)
     {
         var model = _userMapper.MapToModel(dto);
@@ -131,7 +132,6 @@ public class UserService : IUserService
             return usr.Id;
         
         return Guid.Empty;
-        ;
     }
 
     public async Task<IEnumerable<UserDTO>> FindAsync(UserSearchParams searchParams)

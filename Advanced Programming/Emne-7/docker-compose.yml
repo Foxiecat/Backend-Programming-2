@@ -1,0 +1,6 @@
+﻿services:
+  studentbloggapi:
+    image: studentbloggapi
+    build:
+      context: .
+      dockerfile: StudentBloggAPI/Dockerfile
