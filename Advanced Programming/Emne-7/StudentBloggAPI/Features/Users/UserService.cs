@@ -8,14 +8,14 @@ namespace StudentBloggAPI.Features.Users;
 public class UserService : IUserService
 {
     private readonly ILogger<UserService> _logger;
-    private readonly IMapper<User, UserDTO> _userMapper;
+    private readonly IMapper<User, UserResponse> _userMapper;
     private readonly IMapper<User, UserRegistrationDTO> _registrationMapper;
     private readonly IUserRepository _userRepository;
     private readonly IHttpContextAccessor _httpContextAccessor;
 
 
     public UserService(ILogger<UserService> logger, 
-        IMapper<User, UserDTO> userMapper, 
+        IMapper<User, UserResponse> userMapper, 
         IMapper<User, UserRegistrationDTO> registrationMapper, 
         IUserRepository userRepository,
         IHttpContextAccessor httpContextAccessor)
@@ -27,16 +27,16 @@ public class UserService : IUserService
         _httpContextAccessor = httpContextAccessor;
     }
     
-    public async Task<UserDTO?> AddAsync(UserDTO dto)
+    public async Task<UserResponse?> AddAsync(UserResponse response)
     {
-        var model = _userMapper.MapToModel(dto);
+        var model = _userMapper.MapToModel(response);
         var modelResponse = await _userRepository.AddAsync(model);
         return modelResponse is null
             ? null
             : _userMapper.MapToDTO(modelResponse);
     }
 
-    public Task<UserDTO?> UpdateAsync(UserDTO entity)
+    public Task<UserResponse?> UpdateAsync(UserResponse entity)
     {
         throw new NotImplementedException();
     }
@@ -73,7 +73,7 @@ public class UserService : IUserService
         return false;
     }
 
-    public async Task<UserDTO?> GetByIdAsync(Guid id)
+    public async Task<UserResponse?> GetByIdAsync(Guid id)
     {
         var model = await _userRepository.GetByIdAsync(id);
         return model is null
@@ -81,7 +81,7 @@ public class UserService : IUserService
             : _userMapper.MapToDTO(model);
     }
 
-    public async Task<IEnumerable<UserDTO>> GetPagedAsync(int pageNumber, int pageSize)
+    public async Task<IEnumerable<UserResponse>> GetPagedAsync(int pageNumber, int pageSize)
     {
         var users = await _userRepository.GetPagedAsync(pageNumber, pageSize);
 
@@ -100,7 +100,7 @@ public class UserService : IUserService
         // // return liste av UserDTO`s 
     }
 
-    public async Task<UserDTO?> RegisterAsync(UserRegistrationDTO regDto)
+    public async Task<UserResponse?> RegisterAsync(UserRegistrationDTO regDto)
     {
         var user = _registrationMapper.MapToModel(regDto);
         user.Id = Guid.NewGuid();
@@ -134,7 +134,7 @@ public class UserService : IUserService
         return Guid.Empty;
     }
 
-    public async Task<IEnumerable<UserDTO>> FindAsync(UserSearchParams searchParams)
+    public async Task<IEnumerable<UserResponse>> FindAsync(UserSearchParams searchParams)
     {
         // bygge opp predicate dynamsik
         Expression<Func<User, bool>> predicate = u =>

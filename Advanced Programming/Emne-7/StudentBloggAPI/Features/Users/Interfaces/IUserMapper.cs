@@ -2,6 +2,6 @@
 
 public interface IUserMapper
 {
-    UserDTO MapToDTO(User model);
-    User MapToModel(UserDTO dto);
+    UserResponse MapToDTO(User model);
+    User MapToModel(UserResponse response);
 }

@@ -18,7 +18,7 @@ builder.Services
 
 builder.Services
     .AddScoped<IUserService, UserService>()
-    .AddScoped<IMapper<User, UserDTO>, UserMapper>()
+    .AddScoped<IMapper<User, UserResponse>, UserMapper>()
     .AddScoped<IMapper<User, UserRegistrationDTO>, UserRegistrationMapper>()
     .AddScoped<IUserRepository, UserRepository>();
 

@@ -63,7 +63,7 @@ public class UsersIntegrationTests : IClassFixture<CustomWebApplicationFactory>
         HttpResponseMessage response = await _client.GetAsync("/api/v1/users");
 
         // Assert
-        var data = JsonConvert.DeserializeObject<IEnumerable<UserDTO>>(await response.Content.ReadAsStringAsync());
+        var data = JsonConvert.DeserializeObject<IEnumerable<UserResponse>>(await response.Content.ReadAsStringAsync());
         
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         Assert.NotNull(data);

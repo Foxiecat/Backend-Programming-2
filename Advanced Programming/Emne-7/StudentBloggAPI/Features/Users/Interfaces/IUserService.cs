@@ -2,9 +2,9 @@
 
 namespace StudentBloggAPI.Features.Users.Interfaces;
 
-public interface IUserService : IBaseService<UserDTO>
+public interface IUserService : IBaseService<UserResponse>
 {
-    Task<UserDTO?> RegisterAsync(UserRegistrationDTO regDto);
+    Task<UserResponse?> RegisterAsync(UserRegistrationDTO regDto);
     Task<Guid> AuthenticateUserAsync(string user, string password);
-    Task<IEnumerable<UserDTO>> FindAsync(UserSearchParams searchParams);
+    Task<IEnumerable<UserResponse>> FindAsync(UserSearchParams searchParams);
 }

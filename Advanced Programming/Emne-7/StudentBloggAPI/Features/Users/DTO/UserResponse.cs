@@ -1,7 +1,7 @@
 ﻿namespace StudentBloggAPI.Features.Users;
 
 
-public class UserDTO
+public class UserResponse
 {
     public Guid Id { get; init; }
     public string UserName { get; init; } = string.Empty;

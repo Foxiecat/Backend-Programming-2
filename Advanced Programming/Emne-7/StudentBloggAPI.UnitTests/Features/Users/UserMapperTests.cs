@@ -6,7 +6,7 @@ namespace StudentBloggAPI.UnitTests.Features.Users;
 
 public class UserMapperTests
 {
-    private readonly IMapper<User, UserDTO> _userMapper = new UserMapper();
+    private readonly IMapper<User, UserResponse> _userMapper = new UserMapper();
 
     [Fact]
     public void MapToDTO_When_UserModelIsValid_Should_Return_UserDTO()
@@ -26,24 +26,24 @@ public class UserMapperTests
         };
 
         // Act
-        UserDTO userDTO = _userMapper.MapToDTO(user);
+        UserResponse userResponse = _userMapper.MapToDTO(user);
         
         // Assert
-        Assert.NotNull(userDTO);
-        Assert.Equal(user.Id, userDTO.Id);
-        Assert.Equal(user.Email, userDTO.Email);
-        Assert.Equal(user.FirstName, userDTO.FirstName);
-        Assert.Equal(user.LastName, userDTO.LastName);
-        Assert.Equal(user.UserName, userDTO.UserName);
-        Assert.Equal(user.Updated, userDTO.Updated);
-        Assert.Equal(user.Created, userDTO.Created);
+        Assert.NotNull(userResponse);
+        Assert.Equal(user.Id, userResponse.Id);
+        Assert.Equal(user.Email, userResponse.Email);
+        Assert.Equal(user.FirstName, userResponse.FirstName);
+        Assert.Equal(user.LastName, userResponse.LastName);
+        Assert.Equal(user.UserName, userResponse.UserName);
+        Assert.Equal(user.Updated, userResponse.Updated);
+        Assert.Equal(user.Created, userResponse.Created);
     }
 
     [Fact]
     public void MapToModel_When_UserDTOIsValid_Should_Return_UserModel()
     {
         // Arrange
-        UserDTO userDTO = new()
+        UserResponse userResponse = new()
         {
             Id = Guid.NewGuid(),
             Email = "email@email.com",
@@ -55,16 +55,16 @@ public class UserMapperTests
         };
 
         // Act
-        User userModel = _userMapper.MapToModel(userDTO);
+        User userModel = _userMapper.MapToModel(userResponse);
 
         // Assert
         Assert.NotNull(userModel);
-        Assert.Equal(userDTO.Id, userModel.Id);
-        Assert.Equal(userDTO.Email, userModel.Email);
-        Assert.Equal(userDTO.FirstName, userModel.FirstName);
-        Assert.Equal(userDTO.LastName, userModel.LastName);
-        Assert.Equal(userDTO.UserName, userModel.UserName);
-        Assert.Equal(userDTO.Updated, userModel.Updated);
-        Assert.Equal(userDTO.Created, userModel.Created);
+        Assert.Equal(userResponse.Id, userModel.Id);
+        Assert.Equal(userResponse.Email, userModel.Email);
+        Assert.Equal(userResponse.FirstName, userModel.FirstName);
+        Assert.Equal(userResponse.LastName, userModel.LastName);
+        Assert.Equal(userResponse.UserName, userModel.UserName);
+        Assert.Equal(userResponse.Updated, userModel.Updated);
+        Assert.Equal(userResponse.Created, userModel.Created);
     }
 }

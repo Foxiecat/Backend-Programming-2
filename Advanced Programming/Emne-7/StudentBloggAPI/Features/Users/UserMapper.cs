@@ -2,11 +2,11 @@
 
 namespace StudentBloggAPI.Features.Users;
 
-public class UserMapper : IMapper<User, UserDTO>
+public class UserMapper : IMapper<User, UserResponse>
 {
-    public UserDTO MapToDTO(User model)
+    public UserResponse MapToDTO(User model)
     {
-        return new UserDTO()
+        return new UserResponse()
         {
             Id = model.Id,
             FirstName = model.FirstName,
@@ -18,17 +18,17 @@ public class UserMapper : IMapper<User, UserDTO>
         };
     }
 
-    public User MapToModel(UserDTO dto)
+    public User MapToModel(UserResponse response)
     {
         return new User()
         {
-            Id = dto.Id,
-            FirstName = dto.FirstName,
-            LastName = dto.LastName,
-            UserName = dto.UserName,
-            Email = dto.Email,
-            Created = dto.Created,
-            Updated = dto.Updated,
+            Id = response.Id,
+            FirstName = response.FirstName,
+            LastName = response.LastName,
+            UserName = response.UserName,
+            Email = response.Email,
+            Created = response.Created,
+            Updated = response.Updated,
             // HashedPassword => registrerings process -> da blir denne satt
             // IsAdminUser => ved innlogging -> httpcontext som vi senere kan bruke !
         };

@@ -29,7 +29,7 @@ public class UsersController : ControllerBase
     
     
     [HttpGet(Name = "GetUsers")]
-    public async Task<ActionResult<IEnumerable<UserDTO>>> GetUsersAsync(
+    public async Task<ActionResult<IEnumerable<UserResponse>>> GetUsersAsync(
         [FromQuery] UserSearchParams? searchParams,
         [FromQuery] int pageNr = 1, 
         [FromQuery] int pageSize = 10)
@@ -47,7 +47,7 @@ public class UsersController : ControllerBase
     
     
     [HttpGet("{id}", Name = "GetUserByIdAsync")]
-    public async Task<ActionResult<UserDTO>> GetUserByIdAsync(Guid id)
+    public async Task<ActionResult<UserResponse>> GetUserByIdAsync(Guid id)
     {
         var userDto = await _userService.GetByIdAsync(id);
         return userDto is null
@@ -59,7 +59,7 @@ public class UsersController : ControllerBase
     //  dotnet add package Microsoft.EntityFrameworkCore --version 8.0.8
     // https://localhost:54634/api/v1/users/register
     [HttpPost("register",Name = "RegisterUserAsync")]
-    public async Task<ActionResult<UserDTO>> RegisterUserAsync(UserRegistrationDTO dto)
+    public async Task<ActionResult<UserResponse>> RegisterUserAsync(UserRegistrationDTO dto)
     {
         var user = await _userService.RegisterAsync(dto);
         return user is null

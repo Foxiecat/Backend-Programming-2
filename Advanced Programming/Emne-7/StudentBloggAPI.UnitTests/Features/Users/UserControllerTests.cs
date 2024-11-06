@@ -22,7 +22,7 @@ public class UserControllerTests
     public async Task GetUsersAsync_When_DefaultPageSize_And_OneUserExist_ShouldReturnOneUser()
     {
         // Arrange
-        List<UserDTO> listOfDTOS =
+        List<UserResponse> listOfDTOS =
         [
             new()
             {
@@ -45,11 +45,11 @@ public class UserControllerTests
         var result = await _userController.GetUsersAsync(new UserSearchParams());
 
         // Assert
-        var actionResult = Assert.IsType<ActionResult<IEnumerable<UserDTO>>>(result);
+        var actionResult = Assert.IsType<ActionResult<IEnumerable<UserResponse>>>(result);
         var returnValue = Assert.IsType<OkObjectResult>(actionResult.Result);
-        var userDTOS = Assert.IsType<List<UserDTO>>(returnValue.Value);
+        var userDTOS = Assert.IsType<List<UserResponse>>(returnValue.Value);
         
-        UserDTO? userDTO = userDTOS.FirstOrDefault();
+        UserResponse? userDTO = userDTOS.FirstOrDefault();
         Assert.NotNull(userDTO);
         Assert.Equal(userDTO.UserName, listOfDTOS[0].UserName);
     }
