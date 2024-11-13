@@ -32,4 +32,23 @@ public class WeatherForecastController : ControllerBase
             })
             .ToArray();
     }
+
+    [HttpGet("roles", Name = "GetUserAndRoles")]
+    public ActionResult<IEnumerable<string>> GetUserAndRoles()
+    {
+        List<string> results = [];
+        if (HttpContext.Items.ContainsKey("UserId"))
+        {
+            if (HttpContext.Items["UserId"] is string userId)
+                results.Add(userId);
+        }
+        
+        if (HttpContext.Items.ContainsKey("Roles"))
+        {
+            if (HttpContext.Items["Roles"] is IEnumerable<string> roles)
+                results.AddRange(roles);
+        }
+
+        return Ok(results);
+    }
 }

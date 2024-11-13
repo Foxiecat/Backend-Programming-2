@@ -1,5 +1,7 @@
 using System.Text;
 using JWTAuthorization.Configuration;
+using JWTAuthorization.Extensions;
+using JWTAuthorization.Middleware;
 using JWTAuthorization.Services;
 using JWTAuthorization.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -8,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<JwtMiddleware>();
 
 builder.Services
     .Configure<JwtOptions>(builder.Configuration.GetSection("JWT"));
@@ -22,7 +25,7 @@ builder.Services.AddAuthentication(options =>
 {
     byte[] secretInBytes = Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!)
                            ?? throw new NullReferenceException("Missing JWT:Key");
-
+    
     options.TokenValidationParameters = new TokenValidationParameters
     {
         IssuerSigningKey = new SymmetricSecurityKey(secretInBytes),
@@ -40,7 +43,7 @@ builder.Services.AddAuthorization();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerWithJwtBearerAuthentication();
 
 var app = builder.Build();
 
@@ -52,7 +55,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<JwtMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 
