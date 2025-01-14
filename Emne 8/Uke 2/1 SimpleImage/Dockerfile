@@ -8,5 +8,3 @@ ENV MYSQL_ROOT_PASSWORD=gokstad
 
 # IKKE NØDVENDIG Å HA MED, men best practice
 EXPOSE 3306
-
-

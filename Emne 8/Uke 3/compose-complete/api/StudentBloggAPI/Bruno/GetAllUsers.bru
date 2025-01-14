@@ -1,0 +1,21 @@
+meta {
+  name: GetAllUsers
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{urlLink}}/api/v1/Users?pageNr=1&pageSize=10
+  body: none
+  auth: basic
+}
+
+params:query {
+  pageNr: 1
+  pageSize: 10
+}
+
+auth:basic {
+  username: Foxiecat
+  password: Password
+}

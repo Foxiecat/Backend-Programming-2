@@ -1,0 +1,33 @@
+services:
+  api: 
+    container_name: student-blogg-api-compose
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - studentblogg-net
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=student-blogg-db-compose;Database=ga_emne7_avansert;User ID=ga-app;Password=ga-5ecret-%;
+
+  db:
+    container_name: student-blogg-db-compose
+    build:
+      context: ./db
+      dockerfile: Dockerfile
+    ports:
+      - "3366:3306"
+    volumes:
+      - student-blogg-data:/var/lib/mysql
+    networks:
+      - studentblogg-net
+
+networks:
+  studentblogg-net:
+    driver: bridge
+
+volumes:
+  student-blogg-data:

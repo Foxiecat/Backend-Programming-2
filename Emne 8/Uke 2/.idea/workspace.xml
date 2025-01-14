@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5e6212a6-f2e5-49ba-b872-d0de26877855" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.student-blogg-api/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.student-blogg-api/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.student-blogg-api/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.student-blogg-api/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1 SimpleImage/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/1 SimpleImage/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentBloggAPI/Bruno/GetAllUsers.bru" beforeDir="false" afterPath="$PROJECT_DIR$/StudentBloggAPI/Bruno/GetAllUsers.bru" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentBloggAPI/Bruno/environments/StudentBloggAPI.bru" beforeDir="false" afterPath="$PROJECT_DIR$/StudentBloggAPI/Bruno/environments/StudentBloggAPI.bru" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rZEUi5VsNDnxyxdxvH3GCgZXCo" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/neptune/Documents/School/Year 2/Emne 8/Uke 2&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>
