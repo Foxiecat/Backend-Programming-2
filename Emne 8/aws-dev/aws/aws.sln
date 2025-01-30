@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+#
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSUploadFileS3API", "AWSUploadFileS3API\AWSUploadFileS3API.csproj", "{A34782A4-1D41-4B03-B1C8-0A742BD5C0BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AWSImportFileLambda", "AWSImportFileLambda\src\AWSImportFileLambda\AWSImportFileLambda.csproj", "{BF881E42-0B6E-42B0-8784-71BD1C86ED8C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A34782A4-1D41-4B03-B1C8-0A742BD5C0BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A34782A4-1D41-4B03-B1C8-0A742BD5C0BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A34782A4-1D41-4B03-B1C8-0A742BD5C0BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A34782A4-1D41-4B03-B1C8-0A742BD5C0BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF881E42-0B6E-42B0-8784-71BD1C86ED8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF881E42-0B6E-42B0-8784-71BD1C86ED8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF881E42-0B6E-42B0-8784-71BD1C86ED8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF881E42-0B6E-42B0-8784-71BD1C86ED8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

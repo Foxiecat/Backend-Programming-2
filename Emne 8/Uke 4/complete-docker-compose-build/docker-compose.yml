@@ -1,0 +1,46 @@
+services:
+  web:
+    container_name: stud-blogg-web-compose
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "81:81"
+    depends_on:
+      - api
+    networks:
+      - studblogg-nett
+      
+  api:
+    container_name: stud-blogg-api-compose
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - studblogg-nett
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=stud-blogg-db-compose;Database=ga_emne7_avansert;User ID=ga-app;Password=ga-5ecret-%;
+
+  db:
+    container_name: stud-blogg-db-compose
+    build:
+      context: ./db
+      dockerfile: Dockerfile    
+    ports:
+      - "3366:3306"
+    volumes:
+      - studblogg-data:/var/lib/mysql
+    networks:
+      - studblogg-nett
+
+networks:
+  studblogg-nett:
+    driver: bridge
+
+volumes:
+  studblogg-data:
